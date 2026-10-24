@@ -1,9 +1,9 @@
 // 自动生成，勿手改。来源：tools/build-index.mjs
 window.TLI_INDEX = {
- "generatedAt": "2026-10-24T07:03:22.168Z",
+ "generatedAt": "2026-10-24T07:03:58.624Z",
  "pages": 18,
- "scannedMods": 12107,
- "matchedMods": 834,
+ "scannedMods": 12124,
+ "matchedMods": 845,
  "items": [
   {
    "buffId": "blessing.any",
@@ -2668,29 +2668,18 @@ window.TLI_INDEX = {
      "modId": null,
      "kind": "skill",
      "text": "该技能的连携起手技击中时，获得 1 层月晕"
-    },
-    {
-     "page": "skills",
-     "item": "碎月弧光斩",
-     "slug": "Crescent_Slash",
-     "category": "攻击/近战/范围/物理/连携/敏捷/持续",
-     "corroded": false,
-     "tier": null,
-     "modId": null,
-     "kind": "skill",
-     "text": "该技能的连携起手技2额外 -40% 攻击速度该技能的连携终结技额外 -40% 攻击速度每 1 点连携点，该技能的连携起手技 +3% 技能范围每消耗 1 点连携点，该技能的连携终结技 +5% 技能范围该技能的连携起手技击中时，获得 1 层月晕该技能 +30% 连携终结技增幅该技能被触发时，额外 -25% 伤害"
     }
    ]
   },
   {
    "buffId": "combo_point",
-   "count": 81,
+   "count": 92,
    "byPage": {
     "Craft": 47,
     "Destiny": 3,
     "Hero_Memories": 15,
     "Legendary_Gear": 7,
-    "skills": 9
+    "skills": 20
    },
    "samples": [
     {

@@ -38,7 +38,12 @@ function decodeEntities(text) {
 }
 
 function stripTags(html) {
-  return decodeEntities(html.replace(/<[^>]+>/g, ""))
+  return decodeEntities(
+    html
+      .replace(/<br\s*\/?>/gi, "\n")
+      .replace(/<\/(?:div|p|li)>/gi, "\n")
+      .replace(/<[^>]+>/g, "")
+  )
     .replace(/[ \t\u00a0]+/g, " ")
     .trim();
 }
@@ -68,7 +73,13 @@ function parseDetailPage(html, slug) {
   let match;
   while ((match = modPattern.exec(html)) !== null) {
     const text = stripTags(match[1]);
-    if (text.length > 0) lines.push(text);
+    if (text.length > 0) {
+      // 一个 explicitMod 里可能有多行（<br> / 嵌套块），逐行入库
+      for (const line of text.split("\n")) {
+        const trimmed = line.trim();
+        if (trimmed.length > 0) lines.push(trimmed);
+      }
+    }
   }
   const titleMatch = html.match(/<title[^>]*>([\s\S]*?)<\/title>/i);
   const tags = [];
