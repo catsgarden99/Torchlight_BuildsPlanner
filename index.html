@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>火炬之光：无限 · BD 构建规划器</title>
+<link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+<!--
+  纯静态、可 file:// 直开：不要改成 ES Module，也不要用 fetch 读本地 JSON。
+  数据通过下方 <script> 注入 window.TLI_*，见 docs/PLAN.md 2.2。
+-->
+<div id="app"><div style="padding:24px;color:#93a1b1">正在加载数据…</div></div>
+
+<script>
+  // 出错时不要把页面留白：把信息直接印在页面上（这个工具没有 devtools 习惯也要能自查）
+  window.addEventListener("error", function (event) {
+    var box = document.getElementById("app");
+    if (!box) return;
+    var where = (event.filename || "") + ":" + (event.lineno || 0);
+    box.innerHTML =
+      '<pre style="padding:20px;color:#e5686d;white-space:pre-wrap;font:13px/1.7 Consolas,monospace">' +
+      "加载出错：" + (event.message || "未知错误") + "\n" + where +
+      "\n\n如果是数据文件加载失败，请确认 data/meta.js、data/buffs.js、data/sources.js 三个文件都在。\n" +
+      "详见 README.md。</pre>";
+  });
+</script>
+
+<script src="data/meta.js"></script>
+<script src="data/profile.js"></script>
+<script src="data/buffs.js"></script>
+<script src="data/sources.js"></script>
+<script src="data/index.js"></script>
+<script src="assets/app.js"></script>
+
+<script>
+  if (!window.TLI_META || !window.TLI_BUFFS || !window.TLI_SOURCES) {
+    document.getElementById("app").innerHTML =
+      '<pre style="padding:20px;color:#e5686d;white-space:pre-wrap;font:13px/1.7 Consolas,monospace">' +
+      "数据脚本没有加载成功。\n请确认以下文件存在：data/meta.js、data/buffs.js、data/sources.js" +
+      "\n（也检查一下 index.html 是否被单独拷贝到了别处）</pre>";
+  }
+</script>
+</body>
+</html>

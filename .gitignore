@@ -1,0 +1,16 @@
+# 抓取的原始 HTML（体积大、含站点内容，仅本地留存）
+data/raw/
+
+# 中间产物（可从 raw 重新生成）
+data/parsed/
+
+# 依赖与临时产物
+node_modules/
+dist/
+build/
+*.log
+
+# 系统噪声
+.DS_Store
+Thumbs.db
+desktop.ini
