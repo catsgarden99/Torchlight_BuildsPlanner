@@ -884,25 +884,32 @@
   }
 
   function loadDemo() {
-    // 「希雅·渎神」示例：自动供祝福 + 上限转换 + 传奇门槛词条，用来演示整条判定链
+    // 我自己的 BD（猫眼·寻仇之刺）示例：寻仇 → 凌厉，再叠灵动祝福放大凌厉效果
     state.selected = {};
     [
-      "src.trait.blasphemer.grant",
-      "src.trait.blasphemy_ultimate",
-      "src.trait.tenacity_dominion.consume",
-      "src.legendary.will",
+      "src.trait.vendetta_sting.grant",
+      "src.trait.vendetta_sting.incisive",
+      "src.trait.shadow_stalker",
+      "src.trait.wandering_hands",
+      "src.trait.inescapable",
+      "src.skill.crescent_slash.moon_halo",
+      "src.skill.crescent_slash.combo",
       "src.legendary.gauze_of_phantom_sin",
-      "src.skill.aura.fearless",
-      "src.support.concentrated",
     ].forEach(function (id) {
       state.selected[id] = true;
     });
-    state.targets = { "blessing.tenacity": 10, "blessing.any": 6, blasphemy: 10, "aura.fearless": 1 };
-    state.measured = { "blessing.tenacity": 4 };
-    state.activeBuffId = "blessing.tenacity";
+    state.targets = {
+      incisive: 1,
+      "blessing.agility": 10,
+      moon_halo: 1,
+      combo_point: 1,
+      vendetta: 1,
+    };
+    state.measured = { "blessing.agility": 4 };
+    state.activeBuffId = "incisive";
     saveState();
     render();
-    setToast("已载入示例：注意「坚韧祝福」理论 vs 实测 4 层的差异");
+    setToast("已载入猫3示例：注意「灵动祝福」理论 vs 实测 4 层——它直接决定凌厉效果");
   }
 
   function exportSave() {

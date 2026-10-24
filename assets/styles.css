@@ -263,3 +263,59 @@ html, body {
   .sidebar { max-height: 40vh; }
   .search { width: 150px; }
 }
+
+/* ──────────────────────────────────────────────────────────────
+   可读性：整体放大字号。
+   放在最后统一覆盖，避免逐条改上面几十处 px。
+   ────────────────────────────────────────────────────────────── */
+body { font-size: 15px; line-height: 1.6; }
+
+.brand b { font-size: 17px; }
+.brand span { font-size: 13px; }
+.chip { font-size: 12px; padding: 3px 9px; }
+.search, .btn { font-size: 14px; }
+.btn { padding: 7px 13px; }
+
+.side-title { font-size: 12px; }
+.family { font-size: 14px; padding: 7px 10px; }
+.family .num, .num { font-size: 12px; }
+.buff { font-size: 14px; padding: 7px 8px; }
+.buff-meta { font-size: 12px; }
+
+.detail-title h1 { font-size: 23px; }
+.tag, .status-pill { font-size: 12px; }
+.detail-head .summary { font-size: 14.5px; }
+.field { font-size: 12px; }
+.field input { font-size: 14px; padding: 6px 9px; }
+.calc { font-size: 13.5px; }
+
+.block h2 { font-size: 13.5px; }
+.hint { font-size: 12px; }
+.mechanics { font-size: 13.5px; line-height: 1.75; }
+
+.src-name { font-size: 15px; }
+.kind { font-size: 12px; }
+.role { font-size: 11.5px; padding: 2px 7px; }
+.src-value { font-size: 13.5px; }
+.src-cost .cost { font-size: 11.5px; padding: 2px 7px; }
+.score { font-size: 11.5px; }
+.req { font-size: 12px; }
+.pick { font-size: 12px; }
+.src-text { font-size: 12px; }
+.src-text pre { font-size: 13px; line-height: 1.75; }
+.tiny { font-size: 11px; }
+.refs a { font-size: 13px; }
+
+.stat-num { font-size: 20px; }
+.stat-label { font-size: 11.5px; }
+.gap-head { font-size: 13px; }
+.gap-warn, .gap-none { font-size: 12px; }
+.plan { font-size: 12px; padding: 6px 9px; }
+.note { font-size: 11.5px; }
+.pagebar { font-size: 11.5px; padding: 2px 9px; }
+.hit-name { font-size: 13.5px; }
+.hit-where { font-size: 11.5px; }
+.hit-text { font-size: 13px; }
+.more { font-size: 12px; }
+.empty { font-size: 13px; }
+.toast { font-size: 13px; }

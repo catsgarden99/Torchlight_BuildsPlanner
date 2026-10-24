@@ -1,9 +1,9 @@
 // 自动生成，勿手改。来源：tools/build-index.mjs
 window.TLI_INDEX = {
- "generatedAt": "2026-10-24T07:16:41.207Z",
+ "generatedAt": "2026-10-24T07:19:50.370Z",
  "pages": 30,
  "scannedMods": 15690,
- "matchedMods": 1103,
+ "matchedMods": 1100,
  "items": [
   {
    "buffId": "blessing.any",
@@ -1841,49 +1841,6 @@ window.TLI_INDEX = {
      "modId": "251381101",
      "kind": "mod",
      "text": "+1 灵动祝福层数上限"
-    }
-   ]
-  },
-  {
-   "buffId": "blasphemy",
-   "count": 3,
-   "byPage": {
-    "Craft": 2,
-    "Legendary_Gear": 1
-   },
-   "samples": [
-    {
-     "page": "Craft",
-     "item": "力量手套",
-     "slug": "First_Aember",
-     "category": "原初灾烬",
-     "corroded": false,
-     "tier": 1,
-     "modId": "51435841",
-     "kind": "mod",
-     "text": "亵渎侵蚀时，随机替换为一件稀世传奇手套"
-    },
-    {
-     "page": "Craft",
-     "item": "力量手套",
-     "slug": "First_Aember",
-     "category": "原初灾烬 已侵蚀",
-     "corroded": true,
-     "tier": 0,
-     "modId": "51435840",
-     "kind": "mod",
-     "text": "亵渎侵蚀时，随机替换为一件稀世传奇手套，并将其中随机 3 条词缀提升 1 阶"
-    },
-    {
-     "page": "Legendary_Gear",
-     "item": "传奇装备",
-     "slug": null,
-     "category": null,
-     "corroded": false,
-     "tier": 1,
-     "modId": "51435841",
-     "kind": "mod",
-     "text": "亵渎侵蚀时，随机替换为一件稀世传奇手套"
     }
    ]
   },
