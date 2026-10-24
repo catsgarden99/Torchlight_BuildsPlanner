@@ -106,6 +106,8 @@ function parseCardBlocks(html) {
       /<a\b[^>]*class="[^"]*item_rarity[^"]*"[^>]*href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/,
       /<a\b[^>]*href="([^"]+)"[^>]*class="[^"]*item_rarity[^"]*"[^>]*>([\s\S]*?)<\/a>/,
       /<a\b[^>]*href="([^"]+)"[^>]*class="[^"]*(?:ui_item|item)[^"]*"[^>]*>([\s\S]*?)<\/a>/,
+      // 传奇装备的名字是无 class 的纯文本链接：<a data-hover="…" href="Crosser">交错者</a>
+      /<a\b[^>]*href="([A-Za-z0-9_%.-]+)"[^>]*>\s*([^<]{1,40}?)\s*<\/a>/,
     ]);
     const categoryMatch = block.match(/<span>([^<]{1,20})<\/span>/);
     const mods = extractMods(block);

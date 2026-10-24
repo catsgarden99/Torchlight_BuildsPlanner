@@ -1,6 +1,6 @@
 // 自动生成，勿手改。来源：tools/build-index.mjs
 window.TLI_INDEX = {
- "generatedAt": "2026-10-24T07:19:50.370Z",
+ "generatedAt": "2026-10-24T07:31:00.992Z",
  "pages": 30,
  "scannedMods": 15690,
  "matchedMods": 1100,
@@ -1911,8 +1911,8 @@ window.TLI_INDEX = {
     },
     {
      "page": "Legendary_Gear",
-     "item": "传奇装备",
-     "slug": null,
+     "item": "瓦拉冈的狂袭",
+     "slug": "Varagons_Attack",
      "category": null,
      "corroded": false,
      "tier": 1,
@@ -2108,8 +2108,8 @@ window.TLI_INDEX = {
     },
     {
      "page": "Legendary_Gear",
-     "item": "传奇装备",
-     "slug": null,
+     "item": "生息代偿",
+     "slug": "Compensatory_Life",
      "category": null,
      "corroded": false,
      "tier": 1,
@@ -3598,8 +3598,8 @@ window.TLI_INDEX = {
     },
     {
      "page": "Legendary_Gear",
-     "item": "传奇装备",
-     "slug": null,
+     "item": "诡行步",
+     "slug": "Tricksters_Tread",
      "category": null,
      "corroded": false,
      "tier": 1,

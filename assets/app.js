@@ -603,7 +603,7 @@
       html +=
         '<div class="auto-group"><div class="auto-title">自动候选 <span class="num">' +
         auto.length +
-        '</span><span class="hint">按关键字从天赋 / 石板 / 传奇 / 契灵 / 技能里捞出来的，未逐条核实<br>（不参与层数推导，只当线索）</span></div>';
+        '</span><span class="hint">按关键字从天赋（含石板）/ 传奇 / 契灵 / 技能里捞出来的，未逐条核实。<br>已排除否定语气（「无法获得…」这类）与无名条目；不参与层数推导，只当线索。</span></div>';
       html += '<div class="rows">';
       auto.slice(0, 8).forEach(function (row) {
         html += renderSourceRow(row);
@@ -716,7 +716,7 @@
     if (row.auto) html += '<span class="tiny tiny-auto">自动</span>';
     if (off) html += '<span class="tiny tiny-off">需换英雄：' + esc(row.cost.heroLock) + "</span>";
     html += "</div>";
-    html += '<div class="src-value">' + esc(row.value || "") + "</div>";
+    if (row.value) html += '<div class="src-value">' + esc(row.value) + "</div>";
     html += '<div class="src-cost">' + chips + '<span class="score" title="代价分（越小越便宜）">代价 ' + score + "</span></div>";
     if (row.constraints && row.constraints.length) {
       html +=

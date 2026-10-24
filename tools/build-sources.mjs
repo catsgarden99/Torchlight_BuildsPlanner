@@ -74,23 +74,38 @@ const { TLI_BUFFS: buffs, TLI_SKILLS: skillData, TLI_TALENTS: talentData, TLI_PA
 const terms = buildTermTable(buffs);
 const entries = [];
 const seen = new Set();
+const stats = { negated: 0, unnamed: 0, duplicate: 0 };
 
-function push(buffId, meta, text, extra) {
+/**
+ * 否定语气：这类句子不是"给你"的来源，而是"限制/代价"。
+ * 例：「无法获得灵动祝福」「不再提供攻击速度加成」。
+ * 早期版本按关键字直接判成 grant，会把负面词条混进来源，这里一律排除。
+ */
+const NEGATION = /无法|不能|不再|不可|不会|禁止|失去|移除|清空|无法再|不能获得/;
+
+function push(buffId, meta, text) {
+  if (NEGATION.test(text)) {
+    stats.negated += 1;
+    return;
+  }
   const key = `${buffId}|${meta.page}|${meta.item}|${text}`;
-  if (seen.has(key)) return;
+  if (seen.has(key)) {
+    stats.duplicate += 1;
+    return;
+  }
   seen.add(key);
   const pageMeta = PAGE_META[meta.page] || { kind: "unknown", label: meta.page, cost: { load: "中" }, ref: "" };
-  const role = classify(text);
   entries.push({
     id: "auto." + buffId + "." + (meta.id || entries.length) + "." + meta.page,
     name: (meta.item || "（未命名）") + "（" + pageMeta.label + "）",
     kind: pageMeta.kind,
     buffIds: [buffId],
-    role,
+    role: classify(text),
     auto: true,
     effect: { mode: "none" },
     text,
-    value: role === "grant" ? "自动候选：文本显示可获得" : role === "consume" ? "自动候选：前置/条件" : "自动候选：数值/上限影响",
+    // 不再写「文本显示可获得」这类废话：角色徽标已经说明一切，正文才是原文
+    value: "",
     cost: { ...pageMeta.cost },
     constraints: meta.constraint ? [meta.constraint] : [],
     ref: pageMeta.ref,
@@ -115,9 +130,14 @@ for (const talent of talentData?.entries || []) {
 }
 
 // 传奇装备（来自 parsed/Legendary_Gear.json）
+// 只收真正有名字/有 slug 的装备；无名条目多半是页面的分区行，收进来只会得到「传奇装备（传奇装备）」。
 try {
   const legendary = JSON.parse(await readFile(path.join(PARSED_DIR, "Legendary_Gear.json"), "utf8"));
   for (const item of legendary.items) {
+    if (!item.name || !item.slug) {
+      stats.unnamed += 1;
+      continue;
+    }
     for (const mod of item.mods) {
       const hits = terms.filter((t) => mod.text.includes(t.term));
       for (const buffId of [...new Set(hits.map((h) => h.buffId))]) {
@@ -152,7 +172,7 @@ for (const skill of skillData?.skills || []) {
 await writeFile(
   OUT,
   `// 自动生成，勿手改。来源：tools/build-sources.mjs（关键字匹配 + 句式分类，未经人工核实）\nwindow.TLI_SOURCES_AUTO = ${JSON.stringify(
-    { generatedAt: new Date().toISOString(), count: entries.length, entries },
+    { generatedAt: new Date().toISOString(), count: entries.length, skipped: stats, entries },
     null,
     1
   )};\n`,
@@ -168,3 +188,6 @@ for (const entry of entries) {
 console.log(`自动来源 ${entries.length} 条 → ${path.relative(ROOT, OUT)}`);
 console.log("  按角色：" + JSON.stringify(byRole));
 console.log("  按 buff：" + JSON.stringify(byBuff));
+console.log(
+  `  已排除：否定语气 ${stats.negated} / 无名条目 ${stats.unnamed} → 因重复跳过 ${stats.duplicate} 条`
+);
