@@ -52,11 +52,8 @@ function buildTermTable(buffs) {
 }
 
 async function main() {
-  const { TLI_BUFFS: buffs, TLI_SKILLS: skillData, TLI_HEROES: heroData } = await loadGlobals([
-    "buffs.js",
-    "skills.js",
-    "heroes.js",
-  ]);
+  const { TLI_BUFFS: buffs, TLI_SKILLS: skillData, TLI_HEROES: heroData, TLI_TALENTS: talentData, TLI_PACTSPIRITS: pactData } =
+    await loadGlobals(["buffs.js", "skills.js", "heroes.js", "talents.js", "pactspirits.js"]);
   if (!buffs) throw new Error("data/buffs.js 没有导出 TLI_BUFFS");
 
   const files = (await readdir(PARSED_DIR)).filter((name) => name.endsWith(".json"));
@@ -144,6 +141,44 @@ async function main() {
     }
   }
 
+
+  // 天赋文本也进索引（天赋点数是"补 buff"最常见的代价）
+  if (talentData && Array.isArray(talentData.entries)) {
+    for (const talent of talentData.entries) {
+      for (const line of talent.lines || []) {
+        scannedMods += 1;
+        record(line.text, {
+          page: "Talent",
+          item: talent.name,
+          slug: talent.tree ? talent.tree.slug : null,
+          category: talent.kind + (talent.tree ? " / " + talent.tree.name : ""),
+          corroded: false,
+          tier: null,
+          modId: talent.id,
+          kind: "talent",
+        });
+      }
+    }
+  }
+
+  // 契灵文本（占据契灵位，是第三条"获取途径"）
+  if (pactData && Array.isArray(pactData.spirits)) {
+    for (const spirit of pactData.spirits) {
+      for (const line of spirit.modifiers || []) {
+        scannedMods += 1;
+        record(line, {
+          page: "Pactspirit",
+          item: spirit.name,
+          slug: spirit.slug,
+          category: (spirit.tags || []).join("/"),
+          corroded: false,
+          tier: null,
+          modId: null,
+          kind: "pactspirit",
+        });
+      }
+    }
+  }
 
   // 技能文本也进索引：很多 buff 只写在技能描述里（例如「月晕」只出现在主技能上）
   if (skillData && Array.isArray(skillData.skills)) {

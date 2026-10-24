@@ -1,13 +1,13 @@
 // 自动生成，勿手改。来源：tools/build-index.mjs
 window.TLI_INDEX = {
- "generatedAt": "2026-10-24T07:11:16.823Z",
+ "generatedAt": "2026-10-24T07:16:41.207Z",
  "pages": 30,
- "scannedMods": 13923,
- "matchedMods": 998,
+ "scannedMods": 15690,
+ "matchedMods": 1103,
  "items": [
   {
    "buffId": "blessing.any",
-   "count": 690,
+   "count": 786,
    "byPage": {
     "Blending_Rituals": 9,
     "Blessing": 9,
@@ -18,7 +18,9 @@ window.TLI_INDEX = {
     "Graft": 39,
     "Legendary_Gear": 79,
     "TOWER_Sequence": 3,
-    "Vendettas_Sting": 1
+    "Vendettas_Sting": 1,
+    "Talent": 90,
+    "Pactspirit": 6
    },
    "samples": [
     {
@@ -465,7 +467,7 @@ window.TLI_INDEX = {
   },
   {
    "buffId": "blessing.focus",
-   "count": 216,
+   "count": 248,
    "byPage": {
     "Blending_Rituals": 4,
     "Blessing": 1,
@@ -476,7 +478,9 @@ window.TLI_INDEX = {
     "Graft": 11,
     "Legendary_Gear": 17,
     "Memory_Revival": 1,
-    "TOWER_Sequence": 3
+    "TOWER_Sequence": 3,
+    "Talent": 31,
+    "Pactspirit": 1
    },
    "samples": [
     {
@@ -923,7 +927,7 @@ window.TLI_INDEX = {
   },
   {
    "buffId": "blessing.tenacity",
-   "count": 244,
+   "count": 275,
    "byPage": {
     "Blending_Rituals": 4,
     "Blessing": 1,
@@ -934,7 +938,8 @@ window.TLI_INDEX = {
     "Graft": 11,
     "Legendary_Gear": 28,
     "Memory_Revival": 1,
-    "TOWER_Sequence": 3
+    "TOWER_Sequence": 3,
+    "Talent": 31
    },
    "samples": [
     {
@@ -1381,7 +1386,7 @@ window.TLI_INDEX = {
   },
   {
    "buffId": "blessing.agility",
-   "count": 227,
+   "count": 258,
    "byPage": {
     "Blending_Rituals": 1,
     "Blessing": 1,
@@ -1393,7 +1398,8 @@ window.TLI_INDEX = {
     "Legendary_Gear": 27,
     "Memory_Revival": 1,
     "TOWER_Sequence": 3,
-    "Vendettas_Sting": 1
+    "Vendettas_Sting": 1,
+    "Talent": 31
    },
    "samples": [
     {
@@ -1883,11 +1889,12 @@ window.TLI_INDEX = {
   },
   {
    "buffId": "aura.fearless",
-   "count": 8,
+   "count": 9,
    "byPage": {
     "Craft": 5,
     "Legendary_Gear": 1,
-    "TOWER_Sequence": 2
+    "TOWER_Sequence": 2,
+    "Talent": 1
    },
    "samples": [
     {
@@ -1955,6 +1962,17 @@ window.TLI_INDEX = {
      "modId": "51210241",
      "kind": "mod",
      "text": "击中敌人时，触发 (5–15) 级狂猛战吼，间隔 8 秒"
+    },
+    {
+     "page": "Talent",
+     "item": "至臻冥王天赋点",
+     "slug": "Nether_King",
+     "category": "天赋 / 冥王",
+     "corroded": false,
+     "tier": null,
+     "modId": "92100001",
+     "kind": "talent",
+     "text": "精密 狂猛获得额外基础效果：+5% 几率造成双倍伤害"
     }
    ]
   },
@@ -2209,7 +2227,7 @@ window.TLI_INDEX = {
   },
   {
    "buffId": "aura.effect",
-   "count": 123,
+   "count": 128,
    "byPage": {
     "Craft": 71,
     "Destiny": 2,
@@ -2219,7 +2237,7 @@ window.TLI_INDEX = {
     "Legendary_Gear": 4,
     "Nether_Kings_Divinity": 2,
     "TOWER_Sequence": 8,
-    "Talent": 2
+    "Talent": 7
    },
    "samples": [
     {
@@ -2686,7 +2704,7 @@ window.TLI_INDEX = {
   },
   {
    "buffId": "combo_point",
-   "count": 99,
+   "count": 100,
    "byPage": {
     "Craft": 47,
     "Destiny": 3,
@@ -2694,6 +2712,7 @@ window.TLI_INDEX = {
     "Graft": 1,
     "Hero_Memories": 15,
     "Legendary_Gear": 7,
+    "Talent": 1,
     "skills": 20
    },
    "samples": [
@@ -3324,13 +3343,14 @@ window.TLI_INDEX = {
   },
   {
    "buffId": "swiftness",
-   "count": 46,
+   "count": 48,
    "byPage": {
     "Corrosion": 1,
     "Craft": 31,
     "Graft": 12,
     "Legendary_Gear": 1,
-    "Vendettas_Sting": 1
+    "Vendettas_Sting": 1,
+    "Talent": 2
    },
    "samples": [
     {
@@ -3640,6 +3660,28 @@ window.TLI_INDEX = {
      "modId": null,
      "kind": "trait",
      "text": "拥有迅捷时，寻仇无冷却时间，且寻仇额外 +20% 攻击速度"
+    },
+    {
+     "page": "Talent",
+     "item": "三思而动",
+     "slug": "Goddess_of_Hunting",
+     "category": "核心天赋点 / 狩猎之神",
+     "corroded": false,
+     "tier": null,
+     "modId": "20001200",
+     "kind": "talent",
+     "text": "拥有迅捷\n拥有迅捷时，最近每移动 3 米，+7% 攻击与施法速度，最多叠加 3 次"
+    },
+    {
+     "page": "Talent",
+     "item": "传奇中型天赋",
+     "slug": "God_of_Machines",
+     "category": "天赋 / 机械之神",
+     "corroded": false,
+     "tier": null,
+     "modId": "60070200",
+     "kind": "talent",
+     "text": "召唤物暴击时，获得迅捷\n+10% 移动速度"
     }
    ]
   }

@@ -28,15 +28,15 @@
 | 功能 | 状态 |
 |---|---|
 | 左侧按 buff 家族筛选 + 全库搜索（buff 名、来源名、词条原文） | ✅ |
-| 中间来源矩阵：一条 buff 的所有途径，分「提供 / 需求 / 影响」三类 | ✅ |
+| 中间面板分两块：**获取来源**（从哪拿）与 **上下限与条件**（能叠多少 / 需要什么） | ✅ |
 | 每条来源的代价徽标（词条位 / 技能位 / 辅助位 / 天赋点 / 锁英雄 / 负担）与代价分 | ✅ |
 | 「已在配置」勾选 → 实时推导实际层数与状态（🟢🟡🔵🔴⚪） | ✅ |
 | 目标层数 / 我已实测 两个输入 → **理论有但实测无** 会被标红 | ✅ |
 | 右侧缺口看板：按代价排序给出「最便宜的补法」，点一下即加入配置 | ✅ |
 | 聚合 buff（任意祝福 = 三种祝福之和）自动汇总子 buff | ✅ |
 | 存档导出 / 导入 JSON | ✅ |
-| **全库命中**：抓到的 12k 条词条里，凡含该 buff 关键字的自动列出（带装备名 / 页面 / T 级 / 侵蚀标记） | ✅ |
-| 全量词条、技能、天赋、契灵数据 | 🟡 词条 12k 条已入库；技能 919 条；天赋/契灵/英雄特性 待补 |
+| **全库命中**：抓到的 15.7k 条文本里，凡含该 buff 关键字的自动列出（带来源名 / 页面 / T 级 / 侵蚀标记） | ✅ |
+| 全量数据 | 🟡 词条 13.9k 条、技能 919、天赋 1236、契灵 180、英雄特性 6（猫3） |
 | 性价比排序（含火价）/ 缺口组合求解 / 词条搭配器 | ⬜ M4~M5 |
 
 ### 数据完整度说明（重要）
@@ -83,6 +83,8 @@ data/sources.js            来源边（人工核实 + 原文摘录）
 data/index.js              自动生成：buff ← 词条 反向索引
 data/skills.js             自动生成：919 个技能（名称 / 标签 / 详情文本）
 data/heroes.js             自动生成：英雄特性（含 5 个特性等级的全部词条）
+data/talents.js            自动生成：1236 个天赋 / 核心天赋
+data/pactspirits.js        自动生成：180 个契灵（530 条词条）
 data/raw/                  抓取的原始 HTML（gitignore）
 data/parsed/               解析中间产物（gitignore）
 docs/PLAN.md               总体方案（形态选型 / 数据模型 / 判定算法 / 路线图）
@@ -92,6 +94,8 @@ tools/inspect-html.mjs     阶段 B：结构探测（先看再写解析器）
 tools/parse-tlidb.mjs      阶段 C-1：HTML → 结构化 JSON（卡片式 + 表格式）
 tools/parse-skills.mjs     阶段 C-2：技能列表页 + 详情页 → data/skills.js
 tools/parse-heroes.mjs     阶段 C-3：英雄特性（data-tier-content）→ data/heroes.js
+tools/parse-talents.mjs    阶段 C-3：天赋（data-id + data-source=attr）
+tools/parse-pactspirits.mjs 阶段 C-3：契灵（class="modifier"）
 tools/build-index.mjs      阶段 C-4：buff 关键字反向索引 → data/index.js
 tools/smoke-dom.mjs        DOM 桩冒烟测试（无浏览器也能验证渲染）
 ```
@@ -110,16 +114,19 @@ node tools/fetch-tlidb.mjs --slug=Crescent_Slash
 node tools/inspect-html.mjs data/raw/Crescent_Slash.html
 
 # C 解析 + 索引
-node tools/parse-tlidb.mjs        # → data/parsed/*.json
-node tools/parse-skills.mjs       # → data/skills.js
-node tools/parse-heroes.mjs       # → data/heroes.js
+node tools/parse-tlidb.mjs        # → data/parsed/*.json（词条，未标注 0）
+node tools/parse-skills.mjs       # → data/skills.js（919）
+node tools/parse-heroes.mjs       # → data/heroes.js（特性）
+node tools/parse-talents.mjs      # → data/talents.js（1236）
+node tools/parse-pactspirits.mjs  # → data/pactspirits.js（180）
 node tools/build-index.mjs        # → data/index.js
 
 # D 自检（无浏览器也能跑）
 node tools/smoke-dom.mjs
 ```
 
-当前产物：**18 页 / 12098 条词条 / 919 个技能**，索引扫描 12107 条、命中 834 条。
+当前产物：**30 页 / 13,877 条词条 / 919 技能 / 1236 天赋 / 180 契灵**，
+索引扫描 **15,690** 条文本、命中 **1,103** 条。
 
 环境要求：**Node 18+**（脚本用内置 `fetch`，无依赖）。当前机器已验证 `node v22.23.2` 可用。
 

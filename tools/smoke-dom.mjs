@@ -79,7 +79,7 @@ for (const file of dataFiles) {
 vm.runInContext(readFileSync(path.join(ROOT, "assets", "app.js"), "utf8"), sandbox, { filename: "assets/app.js" });
 
 const rendered = app.innerHTML;
-const required = ["buff 家族", "来源矩阵", "全库命中", "本地存储不可用"];
+const required = ["buff 家族", "获取来源", "上下限与条件", "全库命中", "本地存储不可用"];
 const missing = required.filter((needle) => !rendered.includes(needle));
 
 console.log(`渲染 ${rendered.length} 字符，绑定事件：${Object.keys(listeners).join(",") || "（无）"}`);

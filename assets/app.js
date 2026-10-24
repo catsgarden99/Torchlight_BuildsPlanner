@@ -473,16 +473,6 @@
     var status = STATUS_INFO[info.status];
     var rows = info.rows;
 
-    var filtered = rows.filter(function (row) {
-      if (state.role !== "all" && row.role !== state.role) return false;
-      return true;
-    });
-
-    var roleCounts = { grant: 0, consume: 0, modify: 0 };
-    rows.forEach(function (row) {
-      roleCounts[row.role] = (roleCounts[row.role] || 0) + 1;
-    });
-
     var html = '<main class="detail">';
 
     html +=
@@ -539,23 +529,30 @@
         "</pre></section>";
     }
 
-    // 筛选
-    html +=
-      '<section class="block"><div class="block-head"><h2>来源矩阵</h2><div class="filters">' +
-      filterButton("all", "全部", rows.length) +
-      filterButton("grant", "提供", roleCounts.grant) +
-      filterButton("consume", "需求", roleCounts.consume) +
-      filterButton("modify", "影响", roleCounts.modify) +
-      "</div></div>";
-
-    html += '<div class="rows">';
-    if (!filtered.length) {
-      html += '<div class="empty">该筛选下没有来源。矩阵为空通常意味着：这个 buff 还没有被收录，而不是它拿不到。</div>';
-    }
-    filtered.forEach(function (row) {
-      html += renderSourceRow(row);
+    // ① 获取来源 —— 实战里最常看的部分，永远排在最前
+    var grantRows = [];
+    var limitRows = [];
+    rows.forEach(function (row) {
+      if (row.role === "grant") grantRows.push(row);
+      else limitRows.push(row);
     });
-    html += "</div></section>";
+
+    html += renderSourceSection(
+      "获取来源",
+      "「从哪拿」——绿色标记，勾选后计入理论层数",
+      grantRows,
+      "这个 buff 目前还没有录入「提供型」来源。要么确实拿不到，要么还没收录（看下方全库命中里有没有线索）。",
+      "grant"
+    );
+
+    // ② 上下限与条件 —— 决定"能叠多少"和"必须先凑到什么"
+    html += renderSourceSection(
+      "上下限与条件",
+      "「能叠多少 / 需要什么」——上限修饰与前置需求都在这里",
+      limitRows,
+      "没有额外的上限修饰或前置条件记录。",
+      "limit"
+    );
 
     html += renderIndexSection(buff);
 
@@ -573,18 +570,28 @@
     return html;
   }
 
-  function filterButton(key, label, count) {
-    return (
-      '<button class="filter' +
-      (state.role === key ? " active" : "") +
-      '" data-role="' +
-      key +
-      '">' +
-      label +
+  /** 一个来源区块：标题 + 计数 + 说明 + 行列表（来源与上下限各自独立成块） */
+  function renderSourceSection(title, hint, rows, emptyText, tone) {
+    var html = '<section class="block section-' + tone + '">';
+    html +=
+      '<div class="block-head"><h2>' +
+      esc(title) +
       '<span class="num">' +
-      count +
-      "</span></button>"
-    );
+      rows.length +
+      '</span></h2><span class="hint">' +
+      esc(hint) +
+      "</span></div>";
+    if (rows.length === 0) {
+      html += '<div class="empty">' + esc(emptyText) + "</div>";
+    } else {
+      html += '<div class="rows">';
+      rows.forEach(function (row) {
+        html += renderSourceRow(row);
+      });
+      html += "</div>";
+    }
+    html += "</section>";
+    return html;
   }
 
   /** 全库命中：从抓取到的所有词条里，凡文本含该 buff 关键字的，都列为“来源候选” */

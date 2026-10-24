@@ -153,6 +153,13 @@ html, body {
 .filter.active { color: var(--accent); border-color: #3d3222; background: #1e1913; }
 
 .rows { display: flex; flex-direction: column; gap: 8px; }
+
+/* ── 来源 / 上下限 两个区块 ── */
+.block-head h2 .num { margin-left: 6px; }
+.section-grant h2 { color: var(--ok); }
+.section-limit h2 { color: var(--accent-2); }
+.section-limit .src { background: var(--bg-2); }
+.section-limit .src:hover { background: var(--panel); }
 .src {
   border: 1px solid var(--line-soft); border-radius: var(--radius);
   background: var(--panel); padding: 10px 12px; transition: border-color .15s, background .15s;
