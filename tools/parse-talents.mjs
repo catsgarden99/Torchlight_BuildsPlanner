@@ -109,3 +109,7 @@ console.log(`天赋条目 ${payload.count} 个 → ${path.relative(ROOT, OUT)}`)
 for (const [kind, count] of Object.entries(byKind)) console.log(`  ${kind}: ${count}`);
 const sample = payload.entries.find((entry) => entry.lines.length > 0);
 console.log(`  样例：${sample.name}（${sample.kind}）→ ${sample.lines.map((line) => line.text).join(" | ")}`);
+
+// 说明：神格石板页（Divinity_Slate）里的「传奇/非传奇神格石板」就是同一批天赋点
+// （石板 = 把天赋点装进石板），id 与 Talent 页 100% 重合，因此不单独产出石板数据文件，
+// 石板能提供的词缀已经包含在 data/talents.js 里。石板专属的小表（烙印、回收、成长之路）另行处理。

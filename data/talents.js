@@ -1,6 +1,6 @@
 // 自动生成，勿手改。来源：tools/parse-talents.mjs
 window.TLI_TALENTS = {
- "generatedAt": "2026-10-24T07:16:26.085Z",
+ "generatedAt": "2026-10-24T07:24:13.906Z",
  "count": 1236,
  "entries": [
   {

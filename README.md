@@ -29,6 +29,7 @@
 |---|---|
 | 左侧按 buff 家族筛选 + 全库搜索（buff 名、来源名、词条原文） | ✅ |
 | 中间面板分两块：**获取来源**（从哪拿）与 **上下限与条件**（能叠多少 / 需要什么） | ✅ |
+| **自动候选来源**：从天赋 / 传奇 / 契灵 / 技能里按关键字捞出的 358 条线索，独立分组默认折叠 | ✅ |
 | 每条来源的代价徽标（词条位 / 技能位 / 辅助位 / 天赋点 / 锁英雄 / 负担）与代价分 | ✅ |
 | 「已在配置」勾选 → 实时推导实际层数与状态（🟢🟡🔵🔴⚪） | ✅ |
 | 目标层数 / 我已实测 两个输入 → **理论有但实测无** 会被标红 | ✅ |
@@ -41,11 +42,15 @@
 
 ### 数据完整度说明（重要）
 
-数据有两种来源，界面上分开标注：
+数据有三种来源，界面上分开标注：
 
-1. **人工核实的来源矩阵**（`data/sources.js`）：逐条摘录原文，标 `原文`，承诺可信。
-2. **自动索引**（`data/index.js`）：按关键字从全库词条里匹出来的候选，只保证"文本里提到了"，
-   不判断语义（是提供还是需求）。这块用来回答"全库到底还有多少条相关词条"。
+1. **人工核实的来源**（`data/sources.js`，22 条）：逐条摘录原文，标 `原文`，可核对。
+2. **自动候选来源**（`data/sources-auto.js`，358 条）：从天赋 1236 / 传奇 338 / 契灵 180 / 技能里按关键字 + 句式捞出的线索，
+   标 `自动`，**不参与层数推导**，只用来回答"这东西还能从哪拿"。
+3. **全库命中**（`data/index.js`）：更粗的文本索引（15.7k 条），按页面统计分布。
+
+石板说明：tlidb 的 `Divinity_Slate` 页里「传奇 / 非传奇神格石板」就是**同一批天赋点**
+（id 与 `Talent` 页 100% 重合，1236 条），所以石板能提供的词缀 = 天赋词缀，已在天赋数据里，不重复收录。
 
 当前已核实的人工条目：祝福体系（聚能/坚韧/灵动/任意）、传奇 2 件、光环 5 条、光环辅助 7 条、
 猫眼主技能「碎月弧光斩」的月晕/连携点、猫3 六条英雄特性（寻仇 / 凌厉 / 迅捷 / 灵动祝福联动）。
@@ -82,6 +87,7 @@ data/meta.js               赛季 / 数据状态 / 代价权重（权重可自�
 data/profile.js            我的 BD 画像（英雄 / 特性 / 主技能）
 data/buffs.js              buff 词典
 data/sources.js            来源边（人工核实 + 原文摘录）
+data/sources-auto.js       自动生成：358 条候选来源（天赋/传奇/契灵/技能）
 data/index.js              自动生成：buff ← 词条 反向索引
 data/skills.js             自动生成：919 个技能（名称 / 标签 / 详情文本）
 data/heroes.js             自动生成：英雄特性（含 5 个特性等级的全部词条）
@@ -99,6 +105,7 @@ tools/parse-heroes.mjs     阶段 C-3：英雄特性（data-tier-content）→ d
 tools/parse-talents.mjs    阶段 C-3：天赋（data-id + data-source=attr）
 tools/parse-pactspirits.mjs 阶段 C-3：契灵（class="modifier"）
 tools/build-index.mjs      阶段 C-4：buff 关键字反向索引 → data/index.js
+tools/build-sources.mjs    阶段 C-5：自动候选来源 → data/sources-auto.js
 tools/smoke-dom.mjs        DOM 桩冒烟测试（无浏览器也能验证渲染）
 ```
 
@@ -122,6 +129,7 @@ node tools/parse-heroes.mjs       # → data/heroes.js（特性）
 node tools/parse-talents.mjs      # → data/talents.js（1236）
 node tools/parse-pactspirits.mjs  # → data/pactspirits.js（180）
 node tools/build-index.mjs        # → data/index.js
+node tools/build-sources.mjs      # → data/sources-auto.js（358 条候选）
 
 # D 自检（无浏览器也能跑）
 node tools/smoke-dom.mjs

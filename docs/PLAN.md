@@ -1,7 +1,7 @@
 # 火炬之光：无限 · BD 构建规划器 — 总体方案
 
 > 目标版本：国服 **SS14「困兽」**（tlidb.com/cn 数据，2026/10/16 起）
-> 项目路径：`D:\Code_reporsty\Torchlight_BuildsPlanner`
+> 项目路径：`<项目目录>`（本地路径，不写死）
 > 文档状态：v1（规划稿，含 M0 可运行原型）
 
 ---
@@ -50,7 +50,7 @@
 
 ```
 启动规划器.cmd
-  → msedge --app="file:///D:/Code_reporsty/Torchlight_BuildsPlanner/index.html"
+  → msedge --app="file:///<项目目录>/index.html"
   → 无地址栏、无标签页、独立窗口、可固定到任务栏
 ```
 

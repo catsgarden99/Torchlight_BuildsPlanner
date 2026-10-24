@@ -7,7 +7,9 @@
 
   var META = window.TLI_META || {};
   var BUFFS = window.TLI_BUFFS || [];
-  var SOURCES = window.TLI_SOURCES || [];
+  var SOURCES = (window.TLI_SOURCES || []).concat(
+    (window.TLI_SOURCES_AUTO && window.TLI_SOURCES_AUTO.entries) || []
+  );
   var PROFILE = window.TLI_PROFILE || null;
   var INDEX = window.TLI_INDEX || null;
 
@@ -572,6 +574,13 @@
 
   /** 一个来源区块：标题 + 计数 + 说明 + 行列表（来源与上下限各自独立成块） */
   function renderSourceSection(title, hint, rows, emptyText, tone) {
+    var manual = [];
+    var auto = [];
+    rows.forEach(function (row) {
+      if (row.auto) auto.push(row);
+      else manual.push(row);
+    });
+
     var html = '<section class="block section-' + tone + '">';
     html +=
       '<div class="block-head"><h2>' +
@@ -581,14 +590,37 @@
       '</span></h2><span class="hint">' +
       esc(hint) +
       "</span></div>";
-    if (rows.length === 0) {
-      html += '<div class="empty">' + esc(emptyText) + "</div>";
-    } else {
+
+    if (manual.length > 0) {
       html += '<div class="rows">';
-      rows.forEach(function (row) {
+      manual.forEach(function (row) {
         html += renderSourceRow(row);
       });
       html += "</div>";
+    }
+
+    if (auto.length > 0) {
+      html +=
+        '<div class="auto-group"><div class="auto-title">自动候选 <span class="num">' +
+        auto.length +
+        '</span><span class="hint">按关键字从天赋 / 石板 / 传奇 / 契灵 / 技能里捞出来的，未逐条核实<br>（不参与层数推导，只当线索）</span></div>';
+      html += '<div class="rows">';
+      auto.slice(0, 8).forEach(function (row) {
+        html += renderSourceRow(row);
+      });
+      html += "</div>";
+      if (auto.length > 8) {
+        html += '<details class="more"><summary>再看 ' + (auto.length - 8) + " 条自动候选</summary><div class=\"rows\">";
+        auto.slice(8).forEach(function (row) {
+          html += renderSourceRow(row);
+        });
+        html += "</div></details>";
+      }
+      html += "</div>";
+    }
+
+    if (rows.length === 0) {
+      html += '<div class="empty">' + esc(emptyText) + "</div>";
     }
     html += "</section>";
     return html;
@@ -635,7 +667,7 @@
       });
       html += "</div></details>";
     }
-    html += '<div class="note">索引只按关键字匹配，未判断语义（例：提供 vs 需求）。上面的“来源矩阵”是人工核实过的版本；这里是用来看“全库到底还有多少条相关词条”。</div>';
+    html += '<div class="note">索引只按关键字匹配，未判断语义（例：提供 vs 需求）。上面的「获取来源」是人工核实版 + 自动候选；这里是用来看「全库到底还有多少条相关词条」。</div>';
     html += "</section>";
     return html;
   }
@@ -681,6 +713,7 @@
     html += '<span class="kind">' + esc(KIND_LABEL[row.kind] || row.kind) + "</span>";
     if (row.incomplete) html += '<span class="tiny">待补</span>';
     if (row.verified) html += '<span class="tiny tiny-ok">原文</span>';
+    if (row.auto) html += '<span class="tiny tiny-auto">自动</span>';
     if (off) html += '<span class="tiny tiny-off">需换英雄：' + esc(row.cost.heroLock) + "</span>";
     html += "</div>";
     html += '<div class="src-value">' + esc(row.value || "") + "</div>";
