@@ -81,6 +81,7 @@ html, body {
 }
 .side-title:first-child { margin-top: 2px; }
 .num { color: var(--text-faint); font-size: 11px; }
+.focus-star { color: var(--accent); margin-right: 4px; font-size: 11px; }
 .num-empty { color: #4a5563; }
 
 .family {

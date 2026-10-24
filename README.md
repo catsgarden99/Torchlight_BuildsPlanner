@@ -48,12 +48,24 @@
    不判断语义（是提供还是需求）。这块用来回答"全库到底还有多少条相关词条"。
 
 当前已核实的人工条目：祝福体系（聚能/坚韧/灵动/任意/亵渎）、希雅四条特性、传奇 2 件、光环 5 条、光环辅助 7 条、
-猫眼主技能「碎月弧光斩」的月晕/连携点。
+猫眼主技能「碎月弧光斩」的月晕/连携点、猫3 六条英雄特性（寻仇 / 凌厉 / 迅捷 / 灵动祝福联动）。
 
 ### 我的 BD（`data/profile.js`）
 
 猫眼·艾瑞卡 · **寻仇之刺（猫3）**，主技能 **碎月弧光斩**（`Crescent_Slash`，标签：攻击/近战/范围/物理/连携/敏捷/持续）。
-界面会把锁定在别的英雄上的来源标成 `需换英雄：希雅` 并压暗。
+
+六条特性与它们牵动的 buff：
+
+| 特性 | 需求等级 | 作用 |
+|---|---|---|
+| 寻仇之刺 | 1 | 提供**寻仇**（替换第三个技能槽）；释放寻仇 → 获得**凌厉** |
+| 双刃齐下 | 45 | 双持时 +30% 攻击伤害、返还转持续回复 |
+| 袖手悠游 | 60 | 有**迅捷**时寻仇无冷却；凌厉期间手动核心技能 -80% 伤害 |
+| 疾影潜踪 | 60 | 寻仇→无尽寻仇；凌厉 +333% 持续 / +99% 效果 |
+| 猫不可忍 | 75 | 暴击率换"寻仇多触发一次"的概率 |
+| 命悬一线 | 75 | 每层**灵动祝福** +40% 凌厉效果（上限 10 层），代价是近身承伤 |
+
+关注列表里的 buff 在左侧带 ★ 并排在最前；锁定在别的英雄上的来源会标 `需换英雄` 并压暗。
 
 ---
 
@@ -70,6 +82,7 @@ data/buffs.js              buff 词典
 data/sources.js            来源边（人工核实 + 原文摘录）
 data/index.js              自动生成：buff ← 词条 反向索引
 data/skills.js             自动生成：919 个技能（名称 / 标签 / 详情文本）
+data/heroes.js             自动生成：英雄特性（含 5 个特性等级的全部词条）
 data/raw/                  抓取的原始 HTML（gitignore）
 data/parsed/               解析中间产物（gitignore）
 docs/PLAN.md               总体方案（形态选型 / 数据模型 / 判定算法 / 路线图）
@@ -78,7 +91,9 @@ tools/fetch-tlidb.mjs      阶段 A：原样抓取（断点续抓 + manifest + s
 tools/inspect-html.mjs     阶段 B：结构探测（先看再写解析器）
 tools/parse-tlidb.mjs      阶段 C-1：HTML → 结构化 JSON（卡片式 + 表格式）
 tools/parse-skills.mjs     阶段 C-2：技能列表页 + 详情页 → data/skills.js
-tools/build-index.mjs      阶段 C-3：buff 关键字反向索引 → data/index.js
+tools/parse-heroes.mjs     阶段 C-3：英雄特性（data-tier-content）→ data/heroes.js
+tools/build-index.mjs      阶段 C-4：buff 关键字反向索引 → data/index.js
+tools/smoke-dom.mjs        DOM 桩冒烟测试（无浏览器也能验证渲染）
 ```
 
 ---
@@ -97,7 +112,11 @@ node tools/inspect-html.mjs data/raw/Crescent_Slash.html
 # C 解析 + 索引
 node tools/parse-tlidb.mjs        # → data/parsed/*.json
 node tools/parse-skills.mjs       # → data/skills.js
+node tools/parse-heroes.mjs       # → data/heroes.js
 node tools/build-index.mjs        # → data/index.js
+
+# D 自检（无浏览器也能跑）
+node tools/smoke-dom.mjs
 ```
 
 当前产物：**18 页 / 12098 条词条 / 919 个技能**，索引扫描 12107 条、命中 834 条。

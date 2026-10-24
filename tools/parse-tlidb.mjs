@@ -121,18 +121,28 @@ function parseCardBlocks(html) {
   return items;
 }
 
-/** 表格式：<tr> 块（Craft / Talent / Divinity_Slate 等） */
+/** 表格式：<tr> 块（Craft / Talent / Divinity_Slate 等）
+ *  这些表格通常是三列：[词缀效果] [来源] [类型]，例如 Craft：
+ *    <td><span data-modifier-id="…">攻击附加 …</span></td><td>爪</td><td>基础词缀</td>
+ *  所以「名字」要取第二列（来源/槽位），「分类」取第三列（类型），否则整库都会是未标注条目。
+ */
 function parseTableRows(html) {
   const rows = html.split("<tr>").slice(1);
   const items = [];
   for (const row of rows) {
     const mods = extractMods(row);
     if (mods.length === 0) continue;
+    const cells = [];
+    const cellPattern = /<t[dh]\b[^>]*>([\s\S]*?)<\/t[dh]>/g;
+    let cellMatch;
+    while ((cellMatch = cellPattern.exec(row)) !== null) cells.push(stripTags(cellMatch[1]));
     const linkMatch = row.match(/<a\b[^>]*href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/);
+    // 第一列若就是词条本身，则名字来自第二列（来源），分类来自第三列（类型）
+    const firstName = cells[1] && cells[1].length > 0 && cells[1].length <= 40 ? cells[1] : null;
     items.push({
-      name: linkMatch ? stripTags(linkMatch[2]) : null,
+      name: firstName || (linkMatch ? stripTags(linkMatch[2]) : null),
       slug: linkMatch ? linkMatch[1] : null,
-      category: null,
+      category: cells[2] && cells[2].length > 0 && cells[2].length <= 40 ? cells[2] : null,
       corroded: /corroded-mod/.test(row),
       mods,
     });
@@ -140,36 +150,62 @@ function parseTableRows(html) {
   return items;
 }
 
+/** 「词缀 /2526」→「词缀」 */
+function cleanSectionHeader(text) {
+  return String(text || "")
+    .replace(/\s*\/\s*\d+\s*$/, "")
+    .trim();
+}
+
 async function parsePage(file) {
   const html = await readFile(file, "utf8");
   const slug = path.basename(file, ".html");
   const titleMatch = html.match(/<title[^>]*>([\s\S]*?)<\/title>/i);
 
-  let items = parseCardBlocks(html);
-  let layout = "card";
-  if (items.length < 5) {
-    const tableItems = parseTableRows(html);
-    if (tableItems.length > items.length) {
-      items = tableItems;
-      layout = "table";
+  // 按 card-header 分段：段标题（例如「词缀」「打造」）可以作为没有名字的条目的兜底标注，
+  // 避免整页条目都显示成「未标注条目」。
+  const rawSections = html.split(/<div class="card-header">/);
+  rawSections.shift(); // 第一个 header 之前的导航区
+  const items = [];
+  let usedTable = false;
+  let usedCard = false;
+
+  for (const section of rawSections) {
+    const headerEnd = section.indexOf("</div>");
+    const header = cleanSectionHeader(stripTags(section.slice(0, headerEnd)));
+
+    let part = parseCardBlocks(section);
+    if (part.length > 0) usedCard = true;
+    const tablePart = parseTableRows(section);
+    if (tablePart.length > part.length) {
+      part = tablePart;
+      usedTable = true;
+    }
+    for (const item of part) {
+      if (!item.name && header) item.name = header;
+      items.push(item);
     }
   }
+
+  let layout = usedTable && usedCard ? "mixed" : usedTable ? "table" : "card";
   if (items.length === 0) {
     // 兜底：整页当作一个块，至少不丢词条
     const mods = extractMods(html);
     if (mods.length > 0) {
-      items = [{ name: null, slug: null, category: null, corroded: false, mods }];
+      items.push({ name: null, slug: null, category: null, corroded: false, mods });
       layout = "document";
     }
   }
 
   const modCount = items.reduce((sum, item) => sum + item.mods.length, 0);
+  const unnamed = items.filter((item) => !item.name).length;
   return {
     page: slug,
     title: titleMatch ? stripTags(titleMatch[1]) : null,
     layout,
     items,
     modCount,
+    unnamed,
   };
 }
 
@@ -190,13 +226,18 @@ async function main() {
     await writeFile(path.join(OUT_DIR, `${parsed.page}.json`), JSON.stringify(parsed, null, 1), "utf8");
     summary.push(parsed);
     console.log(
-      `${parsed.page.padEnd(28)} ${String(parsed.layout).padEnd(9)} 条目 ${String(parsed.items.length).padStart(5)}  词条 ${String(parsed.modCount).padStart(6)}`
+      `${parsed.page.padEnd(28)} ${String(parsed.layout).padEnd(8)} 条目 ${String(parsed.items.length).padStart(5)}  词条 ${String(parsed.modCount).padStart(6)}  未标注 ${String(parsed.unnamed).padStart(4)}`
     );
   }
 
   const totalItems = summary.reduce((sum, page) => sum + page.items.length, 0);
   const totalMods = summary.reduce((sum, page) => sum + page.modCount, 0);
-  console.log(`\n合计：${summary.length} 页，${totalItems} 条目，${totalMods} 条词条 → ${path.relative(ROOT, OUT_DIR)}`);
+  const totalUnnamed = summary.reduce((sum, page) => sum + page.unnamed, 0);
+  console.log(
+    `\n合计：${summary.length} 页，${totalItems} 条目，${totalMods} 条词条，未标注 ${totalUnnamed} 条目` +
+      (totalItems > 0 ? `（${((totalUnnamed / totalItems) * 100).toFixed(1)}%）` : "") +
+      ` → ${path.relative(ROOT, OUT_DIR)}`
+  );
 }
 
 await main();

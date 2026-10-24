@@ -52,7 +52,11 @@ function buildTermTable(buffs) {
 }
 
 async function main() {
-  const { TLI_BUFFS: buffs, TLI_SKILLS: skillData } = await loadGlobals(["buffs.js", "skills.js"]);
+  const { TLI_BUFFS: buffs, TLI_SKILLS: skillData, TLI_HEROES: heroData } = await loadGlobals([
+    "buffs.js",
+    "skills.js",
+    "heroes.js",
+  ]);
   if (!buffs) throw new Error("data/buffs.js 没有导出 TLI_BUFFS");
 
   const files = (await readdir(PARSED_DIR)).filter((name) => name.endsWith(".json"));
@@ -103,6 +107,43 @@ async function main() {
       }
     }
   }
+
+  // 英雄特性文本也进索引：很多 buff 只写在特性里（例如「凌厉」只由寻仇之刺给出）
+  if (heroData && Array.isArray(heroData.heroes)) {
+    for (const hero of heroData.heroes) {
+      for (const trait of hero.traits || []) {
+        const best = trait.tiers[trait.tiers.length - 1];
+        if (!best) continue;
+        for (const line of best.affixLines || []) {
+          scannedMods += 1;
+          record(line, {
+            page: hero.slug,
+            item: trait.name,
+            slug: hero.heroSlug,
+            category: "英雄特性 Lv" + best.level,
+            corroded: false,
+            tier: best.level,
+            modId: null,
+            kind: "trait",
+          });
+        }
+        for (const line of best.serverLines || []) {
+          scannedMods += 1;
+          record(line, {
+            page: hero.slug,
+            item: trait.name + "（服务器侧）",
+            slug: hero.heroSlug,
+            category: "英雄特性 Lv" + best.level,
+            corroded: false,
+            tier: best.level,
+            modId: null,
+            kind: "trait",
+          });
+        }
+      }
+    }
+  }
+
 
   // 技能文本也进索引：很多 buff 只写在技能描述里（例如「月晕」只出现在主技能上）
   if (skillData && Array.isArray(skillData.skills)) {

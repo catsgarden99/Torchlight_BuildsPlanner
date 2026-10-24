@@ -420,6 +420,18 @@
     });
 
     html += '<div class="side-title">buff 列表 <span class="num">' + visible.length + "</span></div>";
+    // 我这条 BD 关心的 buff 排前面（data/profile.js 的 focusBuffIds）
+    var focusIds = (PROFILE && PROFILE.focusBuffIds) || [];
+    visible = visible.slice().sort(function (a, b) {
+      var fa = focusIds.indexOf(a.id);
+      var fb = focusIds.indexOf(b.id);
+      if (fa !== fb) {
+        if (fa === -1) return 1;
+        if (fb === -1) return -1;
+        return fa - fb;
+      }
+      return 0;
+    });
     html += '<div class="buff-list">';
     visible.forEach(function (buff) {
       var info = computeBuff(buff.id);
@@ -435,6 +447,7 @@
         status.cls +
         '"></span>' +
         '<span class="buff-name">' +
+        (focusIds.indexOf(buff.id) !== -1 ? '<span class="focus-star" title="我的 BD 关注">★</span>' : "") +
         esc(buff.name) +
         (buff.incomplete ? '<span class="tiny">待补</span>' : "") +
         "</span>" +

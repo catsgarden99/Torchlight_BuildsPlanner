@@ -344,4 +344,107 @@ window.TLI_SOURCES = [
     ref: "https://tlidb.com/cn/Crescent_Slash",
     verified: true,
   },
+
+  // ───────────────────────────── 猫眼·艾瑞卡 英雄特性 ─────────────────────────────
+  {
+    id: "src.trait.vendetta_sting.grant",
+    name: "寻仇之刺（特性 Lv5）",
+    kind: "hero-trait",
+    buffIds: ["vendetta"],
+    role: "grant",
+    effect: { mode: "burst", stacks: 1 },
+    text:
+      "释放寻仇后，获得凌厉\n" +
+      "对技能范围加成的 100% 同样作用于寻仇，上限 200%\n" +
+      "被寻仇触发的技能额外 +25% 攻击伤害\n" +
+      "人造月亮：+20% 寻仇技能范围；寻仇触发的技能额外 +10% 攻击伤害\n" +
+      "（服务器侧）将第三个技能槽位的技能替换为寻仇",
+    value: "整套 BD 的地基：没有它就没有「寻仇」，也就没有凌厉",
+    cost: { heroLock: "艾瑞卡", load: "低" },
+    constraints: ["英雄 = 艾瑞卡（猫眼）", "需求等级 1", "第三个技能槽位被寻仇占用"],
+    ref: "https://tlidb.com/cn/Vendettas_Sting",
+    verified: true,
+  },
+  {
+    id: "src.trait.vendetta_sting.incisive",
+    name: "寻仇之刺（获取凌厉）",
+    kind: "hero-trait",
+    buffIds: ["incisive"],
+    role: "grant",
+    effect: { mode: "burst", stacks: 1 },
+    text: "释放寻仇后，获得凌厉",
+    value: "凌厉的唯一来源：只要寻仇在放，凌厉就在",
+    cost: { heroLock: "艾瑞卡", load: "低" },
+    constraints: ["英雄 = 艾瑞卡（猫眼）", "前提：寻仇能实际释放"],
+    ref: "https://tlidb.com/cn/Vendettas_Sting",
+    verified: true,
+  },
+  {
+    id: "src.trait.shadow_stalker",
+    name: "疾影潜踪（特性 Lv5）",
+    kind: "hero-trait",
+    buffIds: ["incisive", "vendetta"],
+    role: "modify",
+    effect: { mode: "none" },
+    text:
+      "无尽寻仇持续期间，对劲敌，寻仇触发的技能额外 +90% 伤害\n" +
+      "额外 +333% 凌厉持续时间，+99% 凌厉效果\n" +
+      "（服务器侧）将寻仇替换为无尽寻仇",
+    value: "把凌厉从「短 buff」变成「几乎常驻且翻倍」——猫3 的核心质变点",
+    cost: { heroLock: "艾瑞卡", load: "低" },
+    constraints: ["英雄 = 艾瑞卡（猫眼）", "需求等级 60", "寻仇被替换为无尽寻仇"],
+    ref: "https://tlidb.com/cn/Vendettas_Sting",
+    verified: true,
+  },
+  {
+    id: "src.trait.wandering_hands",
+    name: "袖手悠游（特性 Lv5）",
+    kind: "hero-trait",
+    buffIds: ["swiftness", "incisive"],
+    role: "consume",
+    effect: { mode: "none" },
+    text:
+      "拥有迅捷时，寻仇无冷却时间，且寻仇额外 +20% 攻击速度\n" +
+      "凌厉持续期间，手动使用的核心技能额外 -80% 伤害\n" +
+      "（服务器侧）核心技能无法被触媒辅助",
+    value: "要求你必须有「迅捷」；代价是核心技能别手动放（-80%），交给寻仇触发",
+    cost: { heroLock: "艾瑞卡", load: "低" },
+    constraints: ["英雄 = 艾瑞卡（猫眼）", "需求等级 60", "前提：拥有迅捷"],
+    ref: "https://tlidb.com/cn/Vendettas_Sting",
+    verified: true,
+  },
+  {
+    id: "src.trait.inescapable",
+    name: "命悬一线（特性 Lv5）",
+    kind: "hero-trait",
+    buffIds: ["incisive", "blessing.agility"],
+    role: "consume",
+    effect: { mode: "none" },
+    text:
+      "凌厉获得额外基础效果：在 5 米内，距离敌人越近，受到的伤害越高，至多在 2 米处额外 +5% 受到的伤害\n" +
+      "每有 1 层灵动祝福，+40% 凌厉效果，上限 10 层",
+    value: "灵动祝福 × 凌厉效果：10 层就是 +400% 凌厉效果，但代价是近身承伤",
+    cost: { heroLock: "艾瑞卡", load: "中" },
+    constraints: ["英雄 = 艾瑞卡（猫眼）", "需求等级 75", "前提：灵动祝福层数（上限 10 层）"],
+    ref: "https://tlidb.com/cn/Vendettas_Sting",
+    verified: true,
+  },
+  {
+    id: "src.trait.cat_cannot_bear",
+    name: "猫不可忍（特性 Lv5）",
+    kind: "hero-trait",
+    buffIds: ["vendetta"],
+    role: "modify",
+    effect: { mode: "none" },
+    text:
+      "双持相同类型武器时，+150 攻击暴击值\n" +
+      "双持不同类型武器时，暴击额外 +20% 攻击伤害\n" +
+      "每 2% 有效暴击率，寻仇有 1% 概率额外触发 1 次核心近战攻击技能\n" +
+      "每 0.6% 溢出暴击率，寻仇有 1% 概率使其触发的技能额外 +100% 攻击伤害",
+    value: "暴击率直接换成「寻仇多触发一次」的概率——暴击在这里不是伤害而是触发频率",
+    cost: { heroLock: "艾瑞卡", load: "低" },
+    constraints: ["英雄 = 艾瑞卡（猫眼）", "需求等级 75", "双持武器"],
+    ref: "https://tlidb.com/cn/Vendettas_Sting",
+    verified: true,
+  },
 ];

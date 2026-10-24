@@ -18,6 +18,15 @@ window.TLI_PROFILE = {
     grants: ["moon_halo"],
     consumes: ["combo_point"],
   },
+  // 猫3 的六条特性（来自 tlidb 英雄页，等级 = 特性等级上限）
+  traits: [
+    { name: "寻仇之刺", reqLevel: 1, provides: ["vendetta", "incisive"] },
+    { name: "双刃齐下", reqLevel: 45, provides: [] },
+    { name: "袖手悠游", reqLevel: 60, requires: ["swiftness"] },
+    { name: "疾影潜踪", reqLevel: 60, modifies: ["incisive", "vendetta"] },
+    { name: "猫不可忍", reqLevel: 75, modifies: ["vendetta"] },
+    { name: "命悬一线", reqLevel: 75, requires: ["blessing.agility"], modifies: ["incisive"] },
+  ],
   // 我关心的目标：默认只在这些 buff 上算缺口（空数组 = 全部）
-  focusBuffIds: [],
+  focusBuffIds: ["vendetta", "incisive", "swiftness", "blessing.agility", "moon_halo", "combo_point"],
 };
