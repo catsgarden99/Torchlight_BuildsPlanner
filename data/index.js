@@ -1,9 +1,9 @@
 // 自动生成，勿手改。来源：tools/build-index.mjs
 window.TLI_INDEX = {
- "generatedAt": "2026-10-24T07:00:42.858Z",
+ "generatedAt": "2026-10-24T07:03:22.168Z",
  "pages": 18,
- "scannedMods": 12098,
- "matchedMods": 753,
+ "scannedMods": 12107,
+ "matchedMods": 834,
  "items": [
   {
    "buffId": "blessing.any",
@@ -26,6 +26,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "3401005",
+     "kind": "mod",
      "text": "+1 坚韧祝福层数上限"
     },
     {
@@ -36,6 +37,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "3401011",
+     "kind": "mod",
      "text": "+1 灵动祝福层数上限"
     },
     {
@@ -46,6 +48,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "3401016",
+     "kind": "mod",
      "text": "消耗法术迸发时，获得 1 层聚能祝福"
     },
     {
@@ -56,6 +59,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "3401017",
+     "kind": "mod",
      "text": "+1 聚能祝福层数上限"
     },
     {
@@ -66,6 +70,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "3401026",
+     "kind": "mod",
      "text": "收割时，获得 1 层聚能祝福"
     },
     {
@@ -76,6 +81,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "3502002",
+     "kind": "mod",
      "text": "[舍命] 坚韧祝福的基础效果转换为：额外 +8% 伤害"
     },
     {
@@ -86,6 +92,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "3502008",
+     "kind": "mod",
      "text": "[积聚] +1 聚能祝福层数上限\n每有 1 层聚能祝福， 额外 +3% 法术伤害"
     },
     {
@@ -96,6 +103,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "3603018",
+     "kind": "mod",
      "text": "[坚毅] 每有 1 层坚韧祝福， 额外 +4% 护甲值"
     },
     {
@@ -106,6 +114,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "3603019",
+     "kind": "mod",
      "text": "[磐石] 每有 1 层坚韧祝福， 5% 受到的物理伤害转化为火焰伤害"
     },
     {
@@ -116,6 +125,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "51230631",
+     "kind": "mod",
      "text": "至少拥有 6 层任意祝福时，+(15–20)% 几率造成双倍伤害"
     },
     {
@@ -126,6 +136,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "54526601",
+     "kind": "mod",
      "text": "(-1–1) 灵动祝福层数上限"
     },
     {
@@ -136,6 +147,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "54526611",
+     "kind": "mod",
      "text": "(-1–1) 聚能祝福层数上限"
     },
     {
@@ -146,6 +158,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "54526621",
+     "kind": "mod",
      "text": "(-1–1) 坚韧祝福层数上限"
     },
     {
@@ -156,6 +169,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "54526631",
+     "kind": "mod",
      "text": "每有一层祝福，额外 -2% 伤害（叠乘）"
     },
     {
@@ -166,6 +180,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "51230631",
+     "kind": "mod",
      "text": "至少拥有 6 层任意祝福时，+(15–20)% 几率造成双倍伤害"
     },
     {
@@ -176,6 +191,7 @@ window.TLI_INDEX = {
      "corroded": true,
      "tier": 0,
      "modId": "51230630",
+     "kind": "mod",
      "text": "至少拥有 6 层任意祝福时，+(25–30)% 几率造成双倍伤害"
     },
     {
@@ -186,6 +202,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "54526631",
+     "kind": "mod",
      "text": "每有一层祝福，额外 -2% 伤害（叠乘）"
     },
     {
@@ -196,6 +213,7 @@ window.TLI_INDEX = {
      "corroded": true,
      "tier": 0,
      "modId": "54526630",
+     "kind": "mod",
      "text": "每有一层祝福，额外 -1% 伤害（叠乘）"
     },
     {
@@ -206,6 +224,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 0,
      "modId": "1500914",
+     "kind": "mod",
      "text": "+2 坚韧祝福层数上限"
     },
     {
@@ -216,6 +235,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 0,
      "modId": "1500915",
+     "kind": "mod",
      "text": "+2 灵动祝福层数上限"
     },
     {
@@ -226,6 +246,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 0,
      "modId": "1500916",
+     "kind": "mod",
      "text": "+2 聚能祝福层数上限"
     },
     {
@@ -236,6 +257,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 0,
      "modId": "1502319",
+     "kind": "mod",
      "text": "释放灵药技能时，获得 1 层所有祝福"
     },
     {
@@ -246,6 +268,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 0,
      "modId": "60060101",
+     "kind": "mod",
      "text": "击败时，+(4–8)% 几率获得 1 层灵动祝福"
     },
     {
@@ -256,6 +279,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 0,
      "modId": "60060801",
+     "kind": "mod",
      "text": "击败时，+(4–8)% 几率获得 1 层聚能祝福"
     },
     {
@@ -266,6 +290,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 0,
      "modId": "60060601",
+     "kind": "mod",
      "text": "击败时， +(5–10)% 几率获得 1 层灵动祝福"
     },
     {
@@ -276,6 +301,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 0,
      "modId": "60060602",
+     "kind": "mod",
      "text": "击败时，+(4–8)% 几率获得 1 层坚韧祝福"
     },
     {
@@ -286,6 +312,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 0,
      "modId": "60061002",
+     "kind": "mod",
      "text": "击败时，+(6–12)% 几率获得 1 层坚韧祝福"
     },
     {
@@ -296,6 +323,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "1503310",
+     "kind": "mod",
      "text": "释放召唤技能时，+100% 几率获得 1 层坚韧祝福，间隔 1 秒"
     },
     {
@@ -306,6 +334,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "1503311",
+     "kind": "mod",
      "text": "释放召唤技能时，+100% 几率获得 1 层聚能祝福，间隔 1 秒"
     },
     {
@@ -316,6 +345,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 0,
      "modId": "60061201",
+     "kind": "mod",
      "text": "击败时，+(6–12)% 几率获得 1 层聚能祝福"
     },
     {
@@ -326,6 +356,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 0,
      "modId": "60060901",
+     "kind": "mod",
      "text": "击败时，+(6–12)% 几率获得 1 层灵动祝福"
     },
     {
@@ -336,6 +367,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "140700801",
+     "kind": "mod",
      "text": "击败时，+(37–50)% 几率获得 1 层坚韧祝福"
     },
     {
@@ -346,6 +378,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "140710801",
+     "kind": "mod",
      "text": "击败时， +(37–50)% 几率获得 1 层灵动祝福"
     },
     {
@@ -356,6 +389,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "140720801",
+     "kind": "mod",
      "text": "击败时，+(37–50)% 几率获得 1 层聚能祝福"
     },
     {
@@ -366,6 +400,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "140402001",
+     "kind": "mod",
      "text": "至少拥有 8 层坚韧祝福时，额外 +(6–8)% 火焰伤害，+(12–15)% 火焰穿透"
     },
     {
@@ -376,6 +411,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "140402101",
+     "kind": "mod",
      "text": "至少拥有 8 层灵动祝福时，额外 +(6–8)% 闪电伤害，+(12–15)% 闪电穿透"
     },
     {
@@ -386,6 +422,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "140402201",
+     "kind": "mod",
      "text": "至少拥有 8 层聚能祝福时，额外 +(6–8)% 冰冷伤害，+(12–15)% 冰冷穿透"
     },
     {
@@ -396,6 +433,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "1502012",
+     "kind": "mod",
      "text": "每拥有 1 层任意祝福， +(2–3)% 伤害"
     },
     {
@@ -406,6 +444,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "140200801",
+     "kind": "mod",
      "text": "+(14–18)% 祝福持续时间"
     },
     {
@@ -416,6 +455,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "120200001",
+     "kind": "mod",
      "text": "每拥有 1 层任意祝福， +(5–6)% 伤害"
     }
    ]
@@ -442,6 +482,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "3401016",
+     "kind": "mod",
      "text": "消耗法术迸发时，获得 1 层聚能祝福"
     },
     {
@@ -452,6 +493,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "3401017",
+     "kind": "mod",
      "text": "+1 聚能祝福层数上限"
     },
     {
@@ -462,6 +504,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "3401026",
+     "kind": "mod",
      "text": "收割时，获得 1 层聚能祝福"
     },
     {
@@ -472,6 +515,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "3502008",
+     "kind": "mod",
      "text": "[积聚] +1 聚能祝福层数上限\n每有 1 层聚能祝福， 额外 +3% 法术伤害"
     },
     {
@@ -482,6 +526,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "54526611",
+     "kind": "mod",
      "text": "(-1–1) 聚能祝福层数上限"
     },
     {
@@ -492,6 +537,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 0,
      "modId": "1500916",
+     "kind": "mod",
      "text": "+2 聚能祝福层数上限"
     },
     {
@@ -502,6 +548,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 0,
      "modId": "60060801",
+     "kind": "mod",
      "text": "击败时，+(4–8)% 几率获得 1 层聚能祝福"
     },
     {
@@ -512,6 +559,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "1503311",
+     "kind": "mod",
      "text": "释放召唤技能时，+100% 几率获得 1 层聚能祝福，间隔 1 秒"
     },
     {
@@ -522,6 +570,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 0,
      "modId": "60061201",
+     "kind": "mod",
      "text": "击败时，+(6–12)% 几率获得 1 层聚能祝福"
     },
     {
@@ -532,6 +581,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "140720801",
+     "kind": "mod",
      "text": "击败时，+(37–50)% 几率获得 1 层聚能祝福"
     },
     {
@@ -542,6 +592,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "140402201",
+     "kind": "mod",
      "text": "至少拥有 8 层聚能祝福时，额外 +(6–8)% 冰冷伤害，+(12–15)% 冰冷穿透"
     },
     {
@@ -552,6 +603,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "251155501",
+     "kind": "mod",
      "text": "击败时，+(37–50)% 几率获得 1 层聚能祝福"
     },
     {
@@ -562,6 +614,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "251321501",
+     "kind": "mod",
      "text": "至少拥有 8 层聚能祝福时，额外 +(6–8)% 冰冷伤害，+(12–15)% 冰冷穿透"
     },
     {
@@ -572,6 +625,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "251121501",
+     "kind": "mod",
      "text": "至少拥有 8 层聚能祝福时，额外 +(6–8)% 冰冷伤害，+(12–15)% 冰冷穿透"
     },
     {
@@ -582,6 +636,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "251381201",
+     "kind": "mod",
      "text": "+1 聚能祝福层数上限"
     },
     {
@@ -592,6 +647,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "251284001",
+     "kind": "mod",
      "text": "+1 聚能祝福层数上限"
     },
     {
@@ -602,6 +658,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 0,
      "modId": "172103100",
+     "kind": "mod",
      "text": "+1 聚能祝福层数上限"
     },
     {
@@ -612,6 +669,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "251184001",
+     "kind": "mod",
      "text": "+1 聚能祝福层数上限"
     },
     {
@@ -622,6 +680,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 0,
      "modId": "172202900",
+     "kind": "mod",
      "text": "轮流获得 1 层坚韧祝福、灵动祝福和聚能祝福，间隔 1 秒"
     },
     {
@@ -632,6 +691,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "251481201",
+     "kind": "mod",
      "text": "+1 聚能祝福层数上限"
     },
     {
@@ -642,6 +702,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "251384001",
+     "kind": "mod",
      "text": "+1 聚能祝福层数上限"
     },
     {
@@ -652,6 +713,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "54340131",
+     "kind": "mod",
      "text": "至少拥有 6 层聚能祝福时，额外 +30% 法术伤害"
     },
     {
@@ -662,6 +724,7 @@ window.TLI_INDEX = {
      "corroded": true,
      "tier": 0,
      "modId": "54340130",
+     "kind": "mod",
      "text": "至少拥有 8 层聚能祝福时，额外 +35% 法术伤害"
     },
     {
@@ -672,6 +735,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "54526611",
+     "kind": "mod",
      "text": "(-1–1) 聚能祝福层数上限"
     },
     {
@@ -682,6 +746,7 @@ window.TLI_INDEX = {
      "corroded": true,
      "tier": 0,
      "modId": "54526610",
+     "kind": "mod",
      "text": "+1 聚能祝福层数上限\n额外 +10% 伤害"
     },
     {
@@ -692,6 +757,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "51433931",
+     "kind": "mod",
      "text": "每有 1 层聚能祝福，额外 +(13–14)% 冰冷伤害"
     },
     {
@@ -702,6 +768,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "51433941",
+     "kind": "mod",
      "text": "每有 1 层聚能祝福， +(1–3)% 暴击伤害"
     },
     {
@@ -712,6 +779,7 @@ window.TLI_INDEX = {
      "corroded": true,
      "tier": 0,
      "modId": "51433930",
+     "kind": "mod",
      "text": "每有 1 层聚能祝福，额外 +(18–19)% 冰冷伤害"
     },
     {
@@ -722,6 +790,7 @@ window.TLI_INDEX = {
      "corroded": true,
      "tier": 0,
      "modId": "51433940",
+     "kind": "mod",
      "text": "每有 1 层聚能祝福， +4% 暴击伤害"
     },
     {
@@ -732,6 +801,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "51434741",
+     "kind": "mod",
      "text": "+1 聚能祝福层数上限"
     },
     {
@@ -742,6 +812,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "51434771",
+     "kind": "mod",
      "text": "如果聚能祝福上限不低于其他祝福，额外 +(8–10)% 伤害"
     },
     {
@@ -752,6 +823,7 @@ window.TLI_INDEX = {
      "corroded": true,
      "tier": 0,
      "modId": "51434740",
+     "kind": "mod",
      "text": "+1 聚能祝福层数上限\n额外 +(5–10)% 伤害"
     },
     {
@@ -762,6 +834,7 @@ window.TLI_INDEX = {
      "corroded": true,
      "tier": 0,
      "modId": "51434770",
+     "kind": "mod",
      "text": "如果聚能祝福上限不低于其他祝福，额外 +(11–15)% 伤害"
     },
     {
@@ -772,6 +845,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "52444811",
+     "kind": "mod",
      "text": "至少拥有 5 层聚能祝福时，召唤物 +40% 几率造成双倍伤害"
     },
     {
@@ -782,6 +856,7 @@ window.TLI_INDEX = {
      "corroded": true,
      "tier": 0,
      "modId": "52444410",
+     "kind": "mod",
      "text": "+1 坚韧祝福层数上限\n+1 聚能祝福层数上限\n+1 灵动祝福层数上限"
     },
     {
@@ -792,6 +867,7 @@ window.TLI_INDEX = {
      "corroded": true,
      "tier": 0,
      "modId": "52444810",
+     "kind": "mod",
      "text": "至少拥有 5 层聚能祝福时，召唤物 +55% 几率造成双倍伤害"
     },
     {
@@ -802,6 +878,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "51441051",
+     "kind": "mod",
      "text": "聚能祝福达到上限时，+(15–20)% 移动速度"
     },
     {
@@ -812,6 +889,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "51441061",
+     "kind": "mod",
      "text": "非暴击时，+20% 几率获得 1 层聚能祝福"
     },
     {
@@ -822,6 +900,7 @@ window.TLI_INDEX = {
      "corroded": true,
      "tier": 0,
      "modId": "51441050",
+     "kind": "mod",
      "text": "聚能祝福达到上限时，+(20–30)% 移动速度"
     },
     {
@@ -832,6 +911,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "51520351",
+     "kind": "mod",
      "text": "[聚能之击] 范围技能对中心敌人至多额外 +32% 伤害\n召唤物的范围技能对中心敌人至多额外 32% 伤害"
     }
    ]
@@ -858,6 +938,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "3401005",
+     "kind": "mod",
      "text": "+1 坚韧祝福层数上限"
     },
     {
@@ -868,6 +949,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "3502002",
+     "kind": "mod",
      "text": "[舍命] 坚韧祝福的基础效果转换为：额外 +8% 伤害"
     },
     {
@@ -878,6 +960,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "3603018",
+     "kind": "mod",
      "text": "[坚毅] 每有 1 层坚韧祝福， 额外 +4% 护甲值"
     },
     {
@@ -888,6 +971,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "3603019",
+     "kind": "mod",
      "text": "[磐石] 每有 1 层坚韧祝福， 5% 受到的物理伤害转化为火焰伤害"
     },
     {
@@ -898,6 +982,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "54526621",
+     "kind": "mod",
      "text": "(-1–1) 坚韧祝福层数上限"
     },
     {
@@ -908,6 +993,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 0,
      "modId": "1500914",
+     "kind": "mod",
      "text": "+2 坚韧祝福层数上限"
     },
     {
@@ -918,6 +1004,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 0,
      "modId": "60060602",
+     "kind": "mod",
      "text": "击败时，+(4–8)% 几率获得 1 层坚韧祝福"
     },
     {
@@ -928,6 +1015,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 0,
      "modId": "60061002",
+     "kind": "mod",
      "text": "击败时，+(6–12)% 几率获得 1 层坚韧祝福"
     },
     {
@@ -938,6 +1026,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "1503310",
+     "kind": "mod",
      "text": "释放召唤技能时，+100% 几率获得 1 层坚韧祝福，间隔 1 秒"
     },
     {
@@ -948,6 +1037,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "140700801",
+     "kind": "mod",
      "text": "击败时，+(37–50)% 几率获得 1 层坚韧祝福"
     },
     {
@@ -958,6 +1048,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "140402001",
+     "kind": "mod",
      "text": "至少拥有 8 层坚韧祝福时，额外 +(6–8)% 火焰伤害，+(12–15)% 火焰穿透"
     },
     {
@@ -968,6 +1059,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "251151401",
+     "kind": "mod",
      "text": "击败时，+(37–50)% 几率获得 1 层坚韧祝福"
     },
     {
@@ -978,6 +1070,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "251321301",
+     "kind": "mod",
      "text": "至少拥有 8 层坚韧祝福时，额外 +(6–8)% 火焰伤害，+(12–15)% 火焰穿透"
     },
     {
@@ -988,6 +1081,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "251121301",
+     "kind": "mod",
      "text": "至少拥有 8 层坚韧祝福时，额外 +(6–8)% 火焰伤害，+(12–15)% 火焰穿透"
     },
     {
@@ -998,6 +1092,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "251381001",
+     "kind": "mod",
      "text": "+1 坚韧祝福层数上限"
     },
     {
@@ -1008,6 +1103,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "251283801",
+     "kind": "mod",
      "text": "+1 坚韧祝福层数上限"
     },
     {
@@ -1018,6 +1114,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 0,
      "modId": "172102900",
+     "kind": "mod",
      "text": "+1 坚韧祝福层数上限"
     },
     {
@@ -1028,6 +1125,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "251183801",
+     "kind": "mod",
      "text": "+1 坚韧祝福层数上限"
     },
     {
@@ -1038,6 +1136,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 0,
      "modId": "172202900",
+     "kind": "mod",
      "text": "轮流获得 1 层坚韧祝福、灵动祝福和聚能祝福，间隔 1 秒"
     },
     {
@@ -1048,6 +1147,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "251481001",
+     "kind": "mod",
      "text": "+1 坚韧祝福层数上限"
     },
     {
@@ -1058,6 +1158,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "251383801",
+     "kind": "mod",
      "text": "+1 坚韧祝福层数上限"
     },
     {
@@ -1068,6 +1169,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "51230141",
+     "kind": "mod",
      "text": "格挡时， 60% 概率获得一层坚韧祝福"
     },
     {
@@ -1078,6 +1180,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "55230151",
+     "kind": "mod",
      "text": "具有坚韧祝福时，格挡幸运"
     },
     {
@@ -1088,6 +1191,7 @@ window.TLI_INDEX = {
      "corroded": true,
      "tier": 0,
      "modId": "51230140",
+     "kind": "mod",
      "text": "格挡时， 100% 概率获得一层坚韧祝福"
     },
     {
@@ -1098,6 +1202,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "51210151",
+     "kind": "mod",
      "text": "[舍命] 坚韧祝福的基础效果转换为：额外 +8% 伤害\n额外拥有 1 层坚韧祝福"
     },
     {
@@ -1108,6 +1213,7 @@ window.TLI_INDEX = {
      "corroded": true,
      "tier": 0,
      "modId": "51210150",
+     "kind": "mod",
      "text": "[舍命] 坚韧祝福的基础效果转换为：额外 +8% 伤害\n额外拥有 2 层坚韧祝福"
     },
     {
@@ -1118,6 +1224,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "51350931",
+     "kind": "mod",
      "text": "坚韧祝福达到上限时，+(150–200) 火焰法术暴击值"
     },
     {
@@ -1128,6 +1235,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "51350941",
+     "kind": "mod",
      "text": "坚韧祝福达到上限时，法术附加50 - 70点火焰伤害"
     },
     {
@@ -1138,6 +1246,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "51350951",
+     "kind": "mod",
      "text": "获得坚韧祝福时，触发 (15–20) 级炽热，间隔0.2秒"
     },
     {
@@ -1148,6 +1257,7 @@ window.TLI_INDEX = {
      "corroded": true,
      "tier": 0,
      "modId": "51350930",
+     "kind": "mod",
      "text": "坚韧祝福达到上限时，+(230–260) 火焰法术暴击值"
     },
     {
@@ -1158,6 +1268,7 @@ window.TLI_INDEX = {
      "corroded": true,
      "tier": 0,
      "modId": "51350940",
+     "kind": "mod",
      "text": "坚韧祝福达到上限时，法术附加100 - 120点火焰伤害"
     },
     {
@@ -1168,6 +1279,7 @@ window.TLI_INDEX = {
      "corroded": true,
      "tier": 0,
      "modId": "51350950",
+     "kind": "mod",
      "text": "获得坚韧祝福时，触发 (25–30) 级炽热，间隔0.2秒"
     },
     {
@@ -1178,6 +1290,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "51420151",
+     "kind": "mod",
      "text": "受击时， +60% 几率获得一层坚韧祝福"
     },
     {
@@ -1188,6 +1301,7 @@ window.TLI_INDEX = {
      "corroded": true,
      "tier": 0,
      "modId": "51420150",
+     "kind": "mod",
      "text": "受击时， +100% 几率获得一层坚韧祝福"
     },
     {
@@ -1198,6 +1312,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "51422941",
+     "kind": "mod",
      "text": "坚韧祝福达到上限时，每 100 点最大生命，额外 +1% 攻击火焰伤害，上限 +(20–30)%"
     },
     {
@@ -1208,6 +1323,7 @@ window.TLI_INDEX = {
      "corroded": true,
      "tier": 0,
      "modId": "51422940",
+     "kind": "mod",
      "text": "坚韧祝福达到上限时，每 100 点最大生命，额外 1.3% 攻击火焰伤害，上限 +(35–40)%"
     },
     {
@@ -1218,6 +1334,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "54526621",
+     "kind": "mod",
      "text": "(-1–1) 坚韧祝福层数上限"
     },
     {
@@ -1228,6 +1345,7 @@ window.TLI_INDEX = {
      "corroded": true,
      "tier": 0,
      "modId": "54526620",
+     "kind": "mod",
      "text": "+1 坚韧祝福层数上限\n额外 +10% 伤害"
     },
     {
@@ -1238,6 +1356,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "51432341",
+     "kind": "mod",
      "text": "[坚韧] 击中敌人时，+100% 几率获得 1 层坚韧祝福\n+1 坚韧祝福层数上限"
     },
     {
@@ -1248,6 +1367,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "51432351",
+     "kind": "mod",
      "text": "至少拥有 (5–7) 层坚韧祝福时，+250 攻击暴击值，额外 +10% 攻击速度"
     }
    ]
@@ -1274,6 +1394,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "3401011",
+     "kind": "mod",
      "text": "+1 灵动祝福层数上限"
     },
     {
@@ -1284,6 +1405,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "54526601",
+     "kind": "mod",
      "text": "(-1–1) 灵动祝福层数上限"
     },
     {
@@ -1294,6 +1416,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 0,
      "modId": "1500915",
+     "kind": "mod",
      "text": "+2 灵动祝福层数上限"
     },
     {
@@ -1304,6 +1427,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 0,
      "modId": "60060101",
+     "kind": "mod",
      "text": "击败时，+(4–8)% 几率获得 1 层灵动祝福"
     },
     {
@@ -1314,6 +1438,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 0,
      "modId": "60060601",
+     "kind": "mod",
      "text": "击败时， +(5–10)% 几率获得 1 层灵动祝福"
     },
     {
@@ -1324,6 +1449,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 0,
      "modId": "60060901",
+     "kind": "mod",
      "text": "击败时，+(6–12)% 几率获得 1 层灵动祝福"
     },
     {
@@ -1334,6 +1460,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "140710801",
+     "kind": "mod",
      "text": "击败时， +(37–50)% 几率获得 1 层灵动祝福"
     },
     {
@@ -1344,6 +1471,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "140402101",
+     "kind": "mod",
      "text": "至少拥有 8 层灵动祝福时，额外 +(6–8)% 闪电伤害，+(12–15)% 闪电穿透"
     },
     {
@@ -1354,6 +1482,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "251153401",
+     "kind": "mod",
      "text": "击败时， +(37–50)% 几率获得 1 层灵动祝福"
     },
     {
@@ -1364,6 +1493,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "251321401",
+     "kind": "mod",
      "text": "至少拥有 8 层灵动祝福时，额外 +(6–8)% 闪电伤害，+(12–15)% 闪电穿透"
     },
     {
@@ -1374,6 +1504,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "251121401",
+     "kind": "mod",
      "text": "至少拥有 8 层灵动祝福时，额外 +(6–8)% 闪电伤害，+(12–15)% 闪电穿透"
     },
     {
@@ -1384,6 +1515,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "251381101",
+     "kind": "mod",
      "text": "+1 灵动祝福层数上限"
     },
     {
@@ -1394,6 +1526,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "251283901",
+     "kind": "mod",
      "text": "+1 灵动祝福层数上限"
     },
     {
@@ -1404,6 +1537,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 0,
      "modId": "172103000",
+     "kind": "mod",
      "text": "+1 灵动祝福层数上限"
     },
     {
@@ -1414,6 +1548,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "251183901",
+     "kind": "mod",
      "text": "+1 灵动祝福层数上限"
     },
     {
@@ -1424,6 +1559,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 0,
      "modId": "172202900",
+     "kind": "mod",
      "text": "轮流获得 1 层坚韧祝福、灵动祝福和聚能祝福，间隔 1 秒"
     },
     {
@@ -1434,6 +1570,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "251481101",
+     "kind": "mod",
      "text": "+1 灵动祝福层数上限"
     },
     {
@@ -1444,6 +1581,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "251383901",
+     "kind": "mod",
      "text": "+1 灵动祝福层数上限"
     },
     {
@@ -1454,6 +1592,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "51220531",
+     "kind": "mod",
      "text": "至少拥有 8 层灵动祝福时，攻击附加 (160–180) - (200–220) 点物理伤害"
     },
     {
@@ -1464,6 +1603,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "51220541",
+     "kind": "mod",
      "text": "至少拥有 8 层灵动祝福时，+90% 暴击伤害"
     },
     {
@@ -1474,6 +1614,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "54220561",
+     "kind": "mod",
      "text": "灵动祝福达到上限时，失去 (1–4) 层灵动祝福，获得狂宴"
     },
     {
@@ -1484,6 +1625,7 @@ window.TLI_INDEX = {
      "corroded": true,
      "tier": 0,
      "modId": "51220530",
+     "kind": "mod",
      "text": "至少拥有 8 层灵动祝福时，攻击附加 (200–220) - (330–350) 点物理伤害"
     },
     {
@@ -1494,6 +1636,7 @@ window.TLI_INDEX = {
      "corroded": true,
      "tier": 0,
      "modId": "51220540",
+     "kind": "mod",
      "text": "至少拥有 8 层灵动祝福时，+135% 暴击伤害"
     },
     {
@@ -1504,6 +1647,7 @@ window.TLI_INDEX = {
      "corroded": true,
      "tier": 0,
      "modId": "54220560",
+     "kind": "mod",
      "text": "灵动祝福达到上限时，失去 (1–2) 层灵动祝福，获得狂宴"
     },
     {
@@ -1514,6 +1658,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "51320541",
+     "kind": "mod",
      "text": "击败时，+10% 几率获得 1 层灵动祝福"
     },
     {
@@ -1524,6 +1669,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "51320551",
+     "kind": "mod",
      "text": "使用位移技能时，可以消耗 (1–3) 层灵动祝福，重置位移技能冷却，间隔 0.3 秒"
     },
     {
@@ -1534,6 +1680,7 @@ window.TLI_INDEX = {
      "corroded": true,
      "tier": 0,
      "modId": "51320540",
+     "kind": "mod",
      "text": "击败时，+100% 几率获得 1 层灵动祝福"
     },
     {
@@ -1544,6 +1691,7 @@ window.TLI_INDEX = {
      "corroded": true,
      "tier": 0,
      "modId": "51320550",
+     "kind": "mod",
      "text": "使用位移技能时，可以消耗 (1–2) 层灵动祝福，重置位移技能冷却，间隔 0.3 秒"
     },
     {
@@ -1554,6 +1702,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "54310161",
+     "kind": "mod",
      "text": "至少拥有 8 层 灵动祝福时，额外 +17% 异常伤害"
     },
     {
@@ -1564,6 +1713,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "54310171",
+     "kind": "mod",
      "text": "至少拥有 10 层 灵动祝福时，获得附加点伤 8% - 8% 的异常基础伤害"
     },
     {
@@ -1574,6 +1724,7 @@ window.TLI_INDEX = {
      "corroded": true,
      "tier": 0,
      "modId": "54310160",
+     "kind": "mod",
      "text": "至少拥有 8 层 灵动祝福时，额外 +20% 异常伤害"
     },
     {
@@ -1584,6 +1735,7 @@ window.TLI_INDEX = {
      "corroded": true,
      "tier": 0,
      "modId": "54310170",
+     "kind": "mod",
      "text": "至少拥有 10 层 灵动祝福时，获得附加点伤 10% - 10% 的异常基础伤害"
     },
     {
@@ -1594,6 +1746,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "51422951",
+     "kind": "mod",
      "text": "如果最近获得过灵动祝福，无法回复生命和魔力"
     },
     {
@@ -1604,6 +1757,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "54526601",
+     "kind": "mod",
      "text": "(-1–1) 灵动祝福层数上限"
     },
     {
@@ -1614,6 +1768,7 @@ window.TLI_INDEX = {
      "corroded": true,
      "tier": 0,
      "modId": "54526600",
+     "kind": "mod",
      "text": "+1 灵动祝福层数上限\n额外 +10% 伤害"
     },
     {
@@ -1624,6 +1779,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "51432331",
+     "kind": "mod",
      "text": "无法获得灵动祝福"
     },
     {
@@ -1634,6 +1790,7 @@ window.TLI_INDEX = {
      "corroded": true,
      "tier": 0,
      "modId": "51432330",
+     "kind": "mod",
      "text": "-1 灵动祝福层数上限"
     },
     {
@@ -1644,6 +1801,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "54430941",
+     "kind": "mod",
      "text": "每有 1 层灵动祝福， +(4–6)% 元素伤害"
     },
     {
@@ -1654,6 +1812,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "51430941",
+     "kind": "mod",
      "text": "+(40–50)% 灵动祝福持续时间"
     },
     {
@@ -1664,6 +1823,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "51430951",
+     "kind": "mod",
      "text": "击败时， +50% 几率获得 1 层灵动祝福"
     }
    ]
@@ -1684,6 +1844,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "51435841",
+     "kind": "mod",
      "text": "亵渎侵蚀时，随机替换为一件稀世传奇手套"
     },
     {
@@ -1694,6 +1855,7 @@ window.TLI_INDEX = {
      "corroded": true,
      "tier": 0,
      "modId": "51435840",
+     "kind": "mod",
      "text": "亵渎侵蚀时，随机替换为一件稀世传奇手套，并将其中随机 3 条词缀提升 1 阶"
     },
     {
@@ -1704,6 +1866,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "51435841",
+     "kind": "mod",
      "text": "亵渎侵蚀时，随机替换为一件稀世传奇手套"
     }
    ]
@@ -1725,6 +1888,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "51210241",
+     "kind": "mod",
      "text": "击中敌人时，触发 (5–15) 级狂猛战吼，间隔 8 秒"
     },
     {
@@ -1735,6 +1899,7 @@ window.TLI_INDEX = {
      "corroded": true,
      "tier": 0,
      "modId": "51210240",
+     "kind": "mod",
      "text": "击中敌人时，触发 (16–25) 级狂猛战吼，间隔 8 秒"
     },
     {
@@ -1745,6 +1910,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 0,
      "modId": "400002002",
+     "kind": "mod",
      "text": "近战技能击中敌人时，+20% 几率触发 10 等级的狂猛战吼，间隔 8 秒"
     },
     {
@@ -1755,6 +1921,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 0,
      "modId": "160506001",
+     "kind": "mod",
      "text": "+120% 狂猛光环效果\n额外 -20% 狂猛魔力封印补偿"
     },
     {
@@ -1765,6 +1932,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 0,
      "modId": "160516010",
+     "kind": "mod",
      "text": "+200% 狂猛光环效果\n额外 -30% 狂猛魔力封印补偿"
     },
     {
@@ -1775,6 +1943,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "51210241",
+     "kind": "mod",
      "text": "击中敌人时，触发 (5–15) 级狂猛战吼，间隔 8 秒"
     }
    ]
@@ -1794,6 +1963,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "51524051",
+     "kind": "mod",
      "text": "满魔时，你拥有 (15–20) 级武器增幅"
     },
     {
@@ -1804,6 +1974,7 @@ window.TLI_INDEX = {
      "corroded": true,
      "tier": 0,
      "modId": "51524050",
+     "kind": "mod",
      "text": "满魔时，你拥有 (25–30) 级武器增幅"
     }
    ]
@@ -1826,6 +1997,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 0,
      "modId": "60062312",
+     "kind": "mod",
      "text": "+(20–30)% 法术增幅光环效果"
     },
     {
@@ -1836,6 +2008,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "52444821",
+     "kind": "mod",
      "text": "非满魔时，你拥有 20 级法术增幅"
     },
     {
@@ -1846,6 +2019,7 @@ window.TLI_INDEX = {
      "corroded": true,
      "tier": 0,
      "modId": "52444820",
+     "kind": "mod",
      "text": "非满魔时，你拥有 40 级法术增幅"
     },
     {
@@ -1856,6 +2030,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "56440311",
+     "kind": "mod",
      "text": "你拥有 20 级精密 法术增幅"
     },
     {
@@ -1866,6 +2041,7 @@ window.TLI_INDEX = {
      "corroded": true,
      "tier": 0,
      "modId": "56440310",
+     "kind": "mod",
      "text": "你拥有 (25–30) 级精密 法术增幅"
     },
     {
@@ -1876,6 +2052,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "51524071",
+     "kind": "mod",
      "text": "满魔时，你拥有 (15–20) 级法术增幅"
     },
     {
@@ -1886,6 +2063,7 @@ window.TLI_INDEX = {
      "corroded": true,
      "tier": 0,
      "modId": "51524070",
+     "kind": "mod",
      "text": "满魔时，你拥有 (25–30) 级法术增幅"
     },
     {
@@ -1896,6 +2074,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "55531341",
+     "kind": "mod",
      "text": "非满魔时，你拥有 (25–30) 级法术增幅"
     },
     {
@@ -1906,6 +2085,7 @@ window.TLI_INDEX = {
      "corroded": true,
      "tier": 0,
      "modId": "55531340",
+     "kind": "mod",
      "text": "非满魔时，你拥有 (35–40) 级法术增幅"
     },
     {
@@ -1916,6 +2096,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 0,
      "modId": "160545032",
+     "kind": "mod",
      "text": "+120% 法术增幅光环效果\n额外 -20% 法术增幅魔力封印补偿"
     },
     {
@@ -1926,6 +2107,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 0,
      "modId": "160555012",
+     "kind": "mod",
      "text": "+200% 法术增幅光环效果\n额外 -30% 法术增幅魔力封印补偿"
     },
     {
@@ -1936,6 +2118,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 0,
      "modId": "500204200",
+     "kind": "mod",
      "text": "过激进化论：法术增幅"
     },
     {
@@ -1946,6 +2129,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "55531341",
+     "kind": "mod",
      "text": "非满魔时，你拥有 (25–30) 级法术增幅"
     }
    ]
@@ -1965,6 +2149,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "51524061",
+     "kind": "mod",
      "text": "满魔时，你拥有 (15–20) 级元素抵抗"
     },
     {
@@ -1975,6 +2160,7 @@ window.TLI_INDEX = {
      "corroded": true,
      "tier": 0,
      "modId": "51524060",
+     "kind": "mod",
      "text": "满魔时，你拥有 (25–30) 级元素抵抗"
     }
    ]
@@ -1994,6 +2180,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "140200701",
+     "kind": "mod",
      "text": "+(22–30)% 能量壁垒魔力封印补偿"
     },
     {
@@ -2004,6 +2191,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "251162001",
+     "kind": "mod",
      "text": "+(22–30)% 能量壁垒魔力封印补偿"
     }
    ]
@@ -2029,6 +2217,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "1507013",
+     "kind": "mod",
      "text": "+(7–8)% 光环效果"
     },
     {
@@ -2039,6 +2228,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "120600201",
+     "kind": "mod",
      "text": "+(15–20)% 光环效果"
     },
     {
@@ -2049,6 +2239,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 0,
      "modId": "60062311",
+     "kind": "mod",
      "text": "+(20–30)% 深层苦痛光环效果"
     },
     {
@@ -2059,6 +2250,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 0,
      "modId": "60062312",
+     "kind": "mod",
      "text": "+(20–30)% 法术增幅光环效果"
     },
     {
@@ -2069,6 +2261,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 0,
      "modId": "60062316",
+     "kind": "mod",
      "text": "+(20–30)% 暴虐光环效果"
     },
     {
@@ -2079,6 +2272,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 0,
      "modId": "60062317",
+     "kind": "mod",
      "text": "+(20–30)% 激进号令光环效果"
     },
     {
@@ -2089,6 +2283,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "172601800",
+     "kind": "mod",
      "text": "+8% 光环效果"
     },
     {
@@ -2099,6 +2294,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "252361101",
+     "kind": "mod",
      "text": "+(15–20)% 光环效果"
     },
     {
@@ -2109,6 +2305,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "172501800",
+     "kind": "mod",
      "text": "+8% 光环效果"
     },
     {
@@ -2119,6 +2316,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "252140801",
+     "kind": "mod",
      "text": "+(15–20)% 光环效果"
     },
     {
@@ -2129,6 +2327,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "172301800",
+     "kind": "mod",
      "text": "+8% 光环效果"
     },
     {
@@ -2139,6 +2338,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "252340801",
+     "kind": "mod",
      "text": "+(15–20)% 光环效果"
     },
     {
@@ -2149,6 +2349,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "172401800",
+     "kind": "mod",
      "text": "+8% 光环效果"
     },
     {
@@ -2159,6 +2360,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "172801800",
+     "kind": "mod",
      "text": "+8% 光环效果"
     },
     {
@@ -2169,6 +2371,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "172001800",
+     "kind": "mod",
      "text": "+8% 光环效果"
     },
     {
@@ -2179,6 +2382,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "252161101",
+     "kind": "mod",
      "text": "+(15–20)% 光环效果"
     },
     {
@@ -2189,6 +2393,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "172101800",
+     "kind": "mod",
      "text": "+8% 光环效果"
     },
     {
@@ -2199,6 +2404,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "172701800",
+     "kind": "mod",
      "text": "+8% 光环效果"
     },
     {
@@ -2209,6 +2415,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "172201800",
+     "kind": "mod",
      "text": "+8% 光环效果"
     },
     {
@@ -2219,6 +2426,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "172901800",
+     "kind": "mod",
      "text": "+8% 光环效果"
     },
     {
@@ -2229,6 +2437,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "80324011",
+     "kind": "mod",
      "text": "周围至少有 1 个敌人时， +30% 光环效果\n周围没有敌人时，+30% 移动速度"
     },
     {
@@ -2239,6 +2448,7 @@ window.TLI_INDEX = {
      "corroded": true,
      "tier": 0,
      "modId": "80324010",
+     "kind": "mod",
      "text": "周围至少有 1 个敌人时， +35% 光环效果\n周围没有敌人时，+35% 移动速度"
     },
     {
@@ -2249,6 +2459,7 @@ window.TLI_INDEX = {
      "corroded": true,
      "tier": 0,
      "modId": "51420940",
+     "kind": "mod",
      "text": "+(25–30)% 光环效果"
     },
     {
@@ -2259,6 +2470,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "51440341",
+     "kind": "mod",
      "text": "被 (4–5) 个或以上的光环影响时，+(15–30)% 光环效果"
     },
     {
@@ -2269,6 +2481,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "51440351",
+     "kind": "mod",
      "text": "每 +3% 魔力封印补偿, +2% 光环效果"
     },
     {
@@ -2279,6 +2492,7 @@ window.TLI_INDEX = {
      "corroded": true,
      "tier": 0,
      "modId": "51440340",
+     "kind": "mod",
      "text": "被 (3–4) 个或以上的光环影响时，+(38–45)% 光环效果"
     },
     {
@@ -2289,6 +2503,7 @@ window.TLI_INDEX = {
      "corroded": true,
      "tier": 0,
      "modId": "51440350",
+     "kind": "mod",
      "text": "每 +1% 魔力封印补偿, +1% 光环效果"
     },
     {
@@ -2299,6 +2514,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "51527431",
+     "kind": "mod",
      "text": "+(120–140)% 腐蚀增幅光环效果"
     },
     {
@@ -2309,6 +2525,7 @@ window.TLI_INDEX = {
      "corroded": true,
      "tier": 0,
      "modId": "51527430",
+     "kind": "mod",
      "text": "+(150–165)% 腐蚀增幅光环效果"
     },
     {
@@ -2319,6 +2536,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 0,
      "modId": "400001700",
+     "kind": "mod",
      "text": "+10% 光环效果"
     },
     {
@@ -2329,6 +2547,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 0,
      "modId": "400088000",
+     "kind": "mod",
      "text": "周围每有 1 名敌人或友军，-5% 光环效果"
     },
     {
@@ -2339,6 +2558,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 1,
      "modId": "151300001",
+     "kind": "mod",
      "text": "+3% 光环效果"
     },
     {
@@ -2349,6 +2569,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 0,
      "modId": "160506001",
+     "kind": "mod",
      "text": "+120% 狂猛光环效果\n额外 -20% 狂猛魔力封印补偿"
     },
     {
@@ -2359,6 +2580,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 0,
      "modId": "160516010",
+     "kind": "mod",
      "text": "+200% 狂猛光环效果\n额外 -30% 狂猛魔力封印补偿"
     },
     {
@@ -2369,6 +2591,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 0,
      "modId": "160526003",
+     "kind": "mod",
      "text": "+120% 精准投射光环效果\n额外 -20% 精准投射魔力封印补偿"
     },
     {
@@ -2379,6 +2602,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 0,
      "modId": "160536009",
+     "kind": "mod",
      "text": "+200% 精准投射光环效果\n额外 -30% 精准投射魔力封印补偿"
     },
     {
@@ -2389,6 +2613,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 0,
      "modId": "160545032",
+     "kind": "mod",
      "text": "+120% 法术增幅光环效果\n额外 -20% 法术增幅魔力封印补偿"
     },
     {
@@ -2399,6 +2624,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 0,
      "modId": "160555012",
+     "kind": "mod",
      "text": "+200% 法术增幅光环效果\n额外 -30% 法术增幅魔力封印补偿"
     },
     {
@@ -2409,6 +2635,7 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 0,
      "modId": "160565034",
+     "kind": "mod",
      "text": "+120% 深层苦痛光环效果\n额外 -20% 深层苦痛魔力封印补偿"
     },
     {
@@ -2419,7 +2646,492 @@ window.TLI_INDEX = {
      "corroded": false,
      "tier": 0,
      "modId": "160576033",
+     "kind": "mod",
      "text": "+120% 激进号令光环效果\n额外 -20% 激进号令魔力封印补偿"
+    }
+   ]
+  },
+  {
+   "buffId": "moon_halo",
+   "count": 2,
+   "byPage": {
+    "skills": 2
+   },
+   "samples": [
+    {
+     "page": "skills",
+     "item": "碎月弧光斩",
+     "slug": "Crescent_Slash",
+     "category": "攻击/近战/范围/物理/连携/敏捷/持续",
+     "corroded": false,
+     "tier": null,
+     "modId": null,
+     "kind": "skill",
+     "text": "该技能的连携起手技击中时，获得 1 层月晕"
+    },
+    {
+     "page": "skills",
+     "item": "碎月弧光斩",
+     "slug": "Crescent_Slash",
+     "category": "攻击/近战/范围/物理/连携/敏捷/持续",
+     "corroded": false,
+     "tier": null,
+     "modId": null,
+     "kind": "skill",
+     "text": "该技能的连携起手技2额外 -40% 攻击速度该技能的连携终结技额外 -40% 攻击速度每 1 点连携点，该技能的连携起手技 +3% 技能范围每消耗 1 点连携点，该技能的连携终结技 +5% 技能范围该技能的连携起手技击中时，获得 1 层月晕该技能 +30% 连携终结技增幅该技能被触发时，额外 -25% 伤害"
+    }
+   ]
+  },
+  {
+   "buffId": "combo_point",
+   "count": 81,
+   "byPage": {
+    "Craft": 47,
+    "Destiny": 3,
+    "Hero_Memories": 15,
+    "Legendary_Gear": 7,
+    "skills": 9
+   },
+   "samples": [
+    {
+     "page": "Craft",
+     "item": null,
+     "slug": null,
+     "category": null,
+     "corroded": false,
+     "tier": 1,
+     "modId": "140061901",
+     "kind": "mod",
+     "text": "若最近释放的连携终结技至少消耗了 8 点连携点，+(40–50)% 连携伤害加深"
+    },
+    {
+     "page": "Craft",
+     "item": null,
+     "slug": null,
+     "category": null,
+     "corroded": false,
+     "tier": 1,
+     "modId": "140102501",
+     "kind": "mod",
+     "text": "若最近释放的连携终结技至少消耗了 8 点连携点，+(80–100)% 连携伤害加深"
+    },
+    {
+     "page": "Craft",
+     "item": null,
+     "slug": null,
+     "category": null,
+     "corroded": false,
+     "tier": 1,
+     "modId": "140211001",
+     "kind": "mod",
+     "text": "+1 点连携起手技获得的连携点\n额外 +(1–2)% 伤害"
+    },
+    {
+     "page": "Craft",
+     "item": "渴瘾肢体：指部",
+     "slug": "Vorax_Limb_Digits",
+     "category": null,
+     "corroded": false,
+     "tier": 1,
+     "modId": "252181801",
+     "kind": "mod",
+     "text": "+1 点连携起手技获得的连携点\n额外 +(1–2)% 伤害"
+    },
+    {
+     "page": "Craft",
+     "item": "金刚护手",
+     "slug": "Vajra_Handguards",
+     "category": null,
+     "corroded": false,
+     "tier": 1,
+     "modId": "51435331",
+     "kind": "mod",
+     "text": "连携终结技 +(15–20)% 生命返还和护盾返还"
+    },
+    {
+     "page": "Craft",
+     "item": "金刚护手",
+     "slug": "Vajra_Handguards",
+     "category": null,
+     "corroded": false,
+     "tier": 1,
+     "modId": "51435341",
+     "kind": "mod",
+     "text": "敌人每有一种渗透效果，连携终结技对其额外 +(15–20)% 伤害"
+    },
+    {
+     "page": "Craft",
+     "item": "金刚护手",
+     "slug": "Vajra_Handguards",
+     "category": null,
+     "corroded": true,
+     "tier": 0,
+     "modId": "51435330",
+     "kind": "mod",
+     "text": "连携终结技 +(20–25)% 生命返还和护盾返还"
+    },
+    {
+     "page": "Craft",
+     "item": "金刚护手",
+     "slug": "Vajra_Handguards",
+     "category": null,
+     "corroded": true,
+     "tier": 0,
+     "modId": "51435340",
+     "kind": "mod",
+     "text": "敌人每有一种渗透效果，连携终结技对其额外 +(20–25)% 伤害"
+    },
+    {
+     "page": "Craft",
+     "item": "幻造奇美拉",
+     "slug": "Illusory_Chimera",
+     "category": null,
+     "corroded": false,
+     "tier": 1,
+     "modId": "52444951",
+     "kind": "mod",
+     "text": "连携终结技暴击时，每消耗 1 点连携点，额外 +(4–5)% 伤害"
+    },
+    {
+     "page": "Craft",
+     "item": "幻造奇美拉",
+     "slug": "Illusory_Chimera",
+     "category": null,
+     "corroded": true,
+     "tier": 0,
+     "modId": "52444950",
+     "kind": "mod",
+     "text": "连携终结技暴击时，每消耗 1 点连携点，额外 +(6–7)% 伤害"
+    },
+    {
+     "page": "Craft",
+     "item": "无相禅心",
+     "slug": "Heart_of_Animitta",
+     "category": null,
+     "corroded": false,
+     "tier": 1,
+     "modId": "51528021",
+     "kind": "mod",
+     "text": "使用连携技能后，额外 (-10–-8)% 受到的伤害，持续 0.5 秒"
+    },
+    {
+     "page": "Craft",
+     "item": "无相禅心",
+     "slug": "Heart_of_Animitta",
+     "category": null,
+     "corroded": false,
+     "tier": 1,
+     "modId": "51528031",
+     "kind": "mod",
+     "text": "+1 连携终结技可释放次数"
+    },
+    {
+     "page": "Craft",
+     "item": "无相禅心",
+     "slug": "Heart_of_Animitta",
+     "category": null,
+     "corroded": false,
+     "tier": 1,
+     "modId": "51528041",
+     "kind": "mod",
+     "text": "+(45–55)% 连携终结技增幅"
+    },
+    {
+     "page": "Craft",
+     "item": "无相禅心",
+     "slug": "Heart_of_Animitta",
+     "category": null,
+     "corroded": false,
+     "tier": 1,
+     "modId": "51528051",
+     "kind": "mod",
+     "text": "连携终结技暴击时，获得 1 点连携点；每次技能仅能触发 1 次该效果；法术迸发时，该效果仅对激活迸发时的首次技能生效"
+    },
+    {
+     "page": "Craft",
+     "item": "无相禅心",
+     "slug": "Heart_of_Animitta",
+     "category": null,
+     "corroded": true,
+     "tier": 0,
+     "modId": "51528020",
+     "kind": "mod",
+     "text": "使用连携技能后，额外 (-18–-16)% 受到的伤害，持续 0.5 秒"
+    },
+    {
+     "page": "Craft",
+     "item": "无相禅心",
+     "slug": "Heart_of_Animitta",
+     "category": null,
+     "corroded": true,
+     "tier": 0,
+     "modId": "51528030",
+     "kind": "mod",
+     "text": "+1 连携终结技可释放次数\n额外 +(10–15)% 连携技能伤害"
+    },
+    {
+     "page": "Craft",
+     "item": "无相禅心",
+     "slug": "Heart_of_Animitta",
+     "category": null,
+     "corroded": true,
+     "tier": 0,
+     "modId": "51528040",
+     "kind": "mod",
+     "text": "+(70–80)% 连携终结技增幅"
+    },
+    {
+     "page": "Craft",
+     "item": "无相禅心",
+     "slug": "Heart_of_Animitta",
+     "category": null,
+     "corroded": true,
+     "tier": 0,
+     "modId": "51528050",
+     "kind": "mod",
+     "text": "连携终结技暴击时，获得 2 点连携点；每次技能仅能触发 1 次该效果；法术迸发时，该效果仅对激活迸发时的首次技能生效"
+    },
+    {
+     "page": "Craft",
+     "item": "达摩束带",
+     "slug": "Bodhi_Girdle",
+     "category": null,
+     "corroded": false,
+     "tier": 1,
+     "modId": "51533921",
+     "kind": "mod",
+     "text": "连携起手技额外 +(12–16)% 攻击和施法速度"
+    },
+    {
+     "page": "Craft",
+     "item": "达摩束带",
+     "slug": "Bodhi_Girdle",
+     "category": null,
+     "corroded": false,
+     "tier": 1,
+     "modId": "51533931",
+     "kind": "mod",
+     "text": "连携终结技额外 +(20–24)% 攻击和施法速度"
+    },
+    {
+     "page": "Craft",
+     "item": "达摩束带",
+     "slug": "Bodhi_Girdle",
+     "category": null,
+     "corroded": false,
+     "tier": 1,
+     "modId": "51533941",
+     "kind": "mod",
+     "text": "连携终结技暴击时，每消耗 1 点连携点，额外 +(3.0–4.0)% 伤害"
+    },
+    {
+     "page": "Craft",
+     "item": "达摩束带",
+     "slug": "Bodhi_Girdle",
+     "category": null,
+     "corroded": true,
+     "tier": 0,
+     "modId": "51533920",
+     "kind": "mod",
+     "text": "连携起手技额外 +(17–20)% 攻击和施法速度"
+    },
+    {
+     "page": "Craft",
+     "item": "达摩束带",
+     "slug": "Bodhi_Girdle",
+     "category": null,
+     "corroded": true,
+     "tier": 0,
+     "modId": "51533930",
+     "kind": "mod",
+     "text": "连携终结技额外 +(25–30)% 攻击和施法速度"
+    },
+    {
+     "page": "Craft",
+     "item": "达摩束带",
+     "slug": "Bodhi_Girdle",
+     "category": null,
+     "corroded": true,
+     "tier": 0,
+     "modId": "51533940",
+     "kind": "mod",
+     "text": "连携终结技暴击时，每消耗 1 点连携点，额外 +(4.0–5.0)% 伤害"
+    },
+    {
+     "page": "Craft",
+     "item": "本源的追忆",
+     "slug": "Memory_of_Origin",
+     "category": null,
+     "corroded": false,
+     "tier": 0,
+     "modId": "402176200",
+     "kind": "mod",
+     "text": "连携起手技额外 +(10–12)% 攻击和施法速度\n连携终结技 +(31–40)% 暴击伤害"
+    },
+    {
+     "page": "Craft",
+     "item": "守己的追忆",
+     "slug": "Memory_of_Discipline",
+     "category": null,
+     "corroded": false,
+     "tier": 0,
+     "modId": "402176300",
+     "kind": "mod",
+     "text": "连携起手技额外 +(10–12)% 攻击和施法速度\n连携终结技 +(31–40)% 暴击伤害"
+    },
+    {
+     "page": "Craft",
+     "item": "奋进的追忆",
+     "slug": "Memory_of_Progress",
+     "category": null,
+     "corroded": false,
+     "tier": 0,
+     "modId": "402176400",
+     "kind": "mod",
+     "text": "连携起手技额外 +(10–12)% 攻击和施法速度\n连携终结技 +(31–40)% 暴击伤害"
+    },
+    {
+     "page": "Craft",
+     "item": null,
+     "slug": null,
+     "category": null,
+     "corroded": false,
+     "tier": 1,
+     "modId": "1234333004",
+     "kind": "mod",
+     "text": "-5% 元素抗性\n异化核心天赋不再将原天赋替换，为当前天赋板核心天赋附加： [所向披靡] 连携技能的终结技处于连续攻击状态时，必定造成相当于最大连续攻击计数的伤害"
+    },
+    {
+     "page": "Craft",
+     "item": null,
+     "slug": null,
+     "category": null,
+     "corroded": false,
+     "tier": 1,
+     "modId": "1204411004",
+     "kind": "mod",
+     "text": "[所向披靡] 连携技能的终结技处于连续攻击状态时，必定造成相当于最大连续攻击计数的伤害"
+    },
+    {
+     "page": "Craft",
+     "item": null,
+     "slug": null,
+     "category": null,
+     "corroded": false,
+     "tier": 1,
+     "modId": "1234333104",
+     "kind": "mod",
+     "text": "-30 全属性\n异化核心天赋不再将原天赋替换，为当前天赋板核心天赋附加： [所向披靡] 连携技能的终结技处于连续攻击状态时，必定造成相当于最大连续攻击计数的伤害"
+    },
+    {
+     "page": "Craft",
+     "item": null,
+     "slug": null,
+     "category": null,
+     "corroded": false,
+     "tier": 1,
+     "modId": "1234333204",
+     "kind": "mod",
+     "text": "-8% 防御值\n异化核心天赋不再将原天赋替换，为当前天赋板核心天赋附加： [所向披靡] 连携技能的终结技处于连续攻击状态时，必定造成相当于最大连续攻击计数的伤害"
+    },
+    {
+     "page": "Destiny",
+     "item": null,
+     "slug": null,
+     "category": null,
+     "corroded": false,
+     "tier": 1,
+     "modId": "100350547",
+     "kind": "mod",
+     "text": "每消耗 1 点连携点，连携终结技 +(1.7–1.9)% 双倍伤害几率"
+    },
+    {
+     "page": "Destiny",
+     "item": null,
+     "slug": null,
+     "category": null,
+     "corroded": false,
+     "tier": 1,
+     "modId": "100350548",
+     "kind": "mod",
+     "text": "释放连携起手技时，反向击退 8 米内的敌人，击退距离为 (1.5–2) 米\n该效果的生效半径受技能范围加成\n最近每释放一次连携终结技，+8% 击退距离，最多叠加 5 次\n额外 +(4–6)% 连携技能伤害"
+    },
+    {
+     "page": "Destiny",
+     "item": null,
+     "slug": null,
+     "category": null,
+     "corroded": false,
+     "tier": 1,
+     "modId": "100350752",
+     "kind": "mod",
+     "text": "如果契约板上存在两个该天命，激活以下效果：\n+1 连携终结技可释放次数\n保持连携序列不被重置的时间固定为 0.3 秒"
+    },
+    {
+     "page": "Hero_Memories",
+     "item": "本源的追忆",
+     "slug": "Memory_of_Origin",
+     "category": null,
+     "corroded": false,
+     "tier": 1,
+     "modId": "402176201",
+     "kind": "mod",
+     "text": "连携起手技额外 +(7–9)% 攻击和施法速度\n连携终结技 +(25–30)% 暴击伤害"
+    },
+    {
+     "page": "Hero_Memories",
+     "item": "本源的追忆",
+     "slug": "Memory_of_Origin",
+     "category": null,
+     "corroded": false,
+     "tier": 2,
+     "modId": "402176202",
+     "kind": "mod",
+     "text": "连携起手技额外 +(5–6)% 攻击和施法速度\n连携终结技 +(20–24)% 暴击伤害"
+    },
+    {
+     "page": "Hero_Memories",
+     "item": "本源的追忆",
+     "slug": "Memory_of_Origin",
+     "category": null,
+     "corroded": false,
+     "tier": 3,
+     "modId": "402176203",
+     "kind": "mod",
+     "text": "连携起手技额外 +4% 攻击和施法速度\n连携终结技 +(15–19)% 暴击伤害"
+    },
+    {
+     "page": "Hero_Memories",
+     "item": "守己的追忆",
+     "slug": "Memory_of_Discipline",
+     "category": null,
+     "corroded": false,
+     "tier": 1,
+     "modId": "402176301",
+     "kind": "mod",
+     "text": "连携起手技额外 +(7–9)% 攻击和施法速度\n连携终结技 +(25–30)% 暴击伤害"
+    },
+    {
+     "page": "Hero_Memories",
+     "item": "守己的追忆",
+     "slug": "Memory_of_Discipline",
+     "category": null,
+     "corroded": false,
+     "tier": 2,
+     "modId": "402176302",
+     "kind": "mod",
+     "text": "连携起手技额外 +(5–6)% 攻击和施法速度\n连携终结技 +(20–24)% 暴击伤害"
+    },
+    {
+     "page": "Hero_Memories",
+     "item": "守己的追忆",
+     "slug": "Memory_of_Discipline",
+     "category": null,
+     "corroded": false,
+     "tier": 3,
+     "modId": "402176303",
+     "kind": "mod",
+     "text": "连携起手技额外 +4% 攻击和施法速度\n连携终结技 +(15–19)% 暴击伤害"
     }
    ]
   }

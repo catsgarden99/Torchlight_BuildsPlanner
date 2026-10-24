@@ -35,19 +35,25 @@
 | 右侧缺口看板：按代价排序给出「最便宜的补法」，点一下即加入配置 | ✅ |
 | 聚合 buff（任意祝福 = 三种祝福之和）自动汇总子 buff | ✅ |
 | 存档导出 / 导入 JSON | ✅ |
-| 全量词条、技能、天赋、契灵数据 | ⬜ 待 M1~M2 |
+| **全库命中**：抓到的 12k 条词条里，凡含该 buff 关键字的自动列出（带装备名 / 页面 / T 级 / 侵蚀标记） | ✅ |
+| 全量词条、技能、天赋、契灵数据 | 🟡 词条 12k 条已入库；技能 919 条；天赋/契灵/英雄特性 待补 |
 | 性价比排序（含火价）/ 缺口组合求解 / 词条搭配器 | ⬜ M4~M5 |
 
 ### 数据完整度说明（重要）
 
-M0 只收录了**已人工核实并摘录原文**的条目：
+数据有两种来源，界面上分开标注：
 
-- 祝福体系（聚能/坚韧/灵动/任意/亵渎）+ 希雅四条相关特性
-- 传奇装备 2 件（决意 / 幻罪黑纱）
-- 光环技能 5 条 + 光环辅助 7 条（效果数值待抓技能详情页）
+1. **人工核实的来源矩阵**（`data/sources.js`）：逐条摘录原文，标 `原文`，承诺可信。
+2. **自动索引**（`data/index.js`）：按关键字从全库词条里匹出来的候选，只保证"文本里提到了"，
+   不判断语义（是提供还是需求）。这块用来回答"全库到底还有多少条相关词条"。
 
-界面里凡是标 `待补` 的，表示**原文已核实但效果数值未取**；家族树里显示 `待补` 的家族表示尚无条目。
-这是刻意的：宁可留空，也不让工具用猜测的数字给你结论。
+当前已核实的人工条目：祝福体系（聚能/坚韧/灵动/任意/亵渎）、希雅四条特性、传奇 2 件、光环 5 条、光环辅助 7 条、
+猫眼主技能「碎月弧光斩」的月晕/连携点。
+
+### 我的 BD（`data/profile.js`）
+
+猫眼·艾瑞卡 · **寻仇之刺（猫3）**，主技能 **碎月弧光斩**（`Crescent_Slash`，标签：攻击/近战/范围/物理/连携/敏捷/持续）。
+界面会把锁定在别的英雄上的来源标成 `需换英雄：希雅` 并压暗。
 
 ---
 
@@ -59,25 +65,42 @@ index.html                 入口（双击开）
 assets/app.js              界面 + 判定引擎（普通脚本，全局命名空间 TLI）
 assets/styles.css          深色主题
 data/meta.js               赛季 / 数据状态 / 代价权重（权重可自己改）
+data/profile.js            我的 BD 画像（英雄 / 特性 / 主技能）
 data/buffs.js              buff 词典
-data/sources.js            来源边（含原文摘录）
-data/raw/                  抓取的原始 HTML（gitignore，不进版本库）
+data/sources.js            来源边（人工核实 + 原文摘录）
+data/index.js              自动生成：buff ← 词条 反向索引
+data/skills.js             自动生成：919 个技能（名称 / 标签 / 详情文本）
+data/raw/                  抓取的原始 HTML（gitignore）
+data/parsed/               解析中间产物（gitignore）
 docs/PLAN.md               总体方案（形态选型 / 数据模型 / 判定算法 / 路线图）
 tools/pages.json           抓取清单（约 60 页）
 tools/fetch-tlidb.mjs      阶段 A：原样抓取（断点续抓 + manifest + sha256）
 tools/inspect-html.mjs     阶段 B：结构探测（先看再写解析器）
+tools/parse-tlidb.mjs      阶段 C-1：HTML → 结构化 JSON（卡片式 + 表格式）
+tools/parse-skills.mjs     阶段 C-2：技能列表页 + 详情页 → data/skills.js
+tools/build-index.mjs      阶段 C-3：buff 关键字反向索引 → data/index.js
 ```
 
 ---
 
-## 数据路线（M1，需要能跑 node）
+## 数据路线
 
 ```bash
-node tools/fetch-tlidb.mjs --list                    # 看抓取清单
-node tools/fetch-tlidb.mjs --only=system,gear-slots  # 先抓核心页
-node tools/inspect-html.mjs data/raw                 # 生成结构报告
-node tools/fetch-tlidb.mjs --all --expand            # 全量 + 技能详情页
+# A 抓取（--slug= 可按需补单个技能/装备页）
+node tools/fetch-tlidb.mjs --list
+node tools/fetch-tlidb.mjs --only=system,gear,hero,craft,skills
+node tools/fetch-tlidb.mjs --slug=Crescent_Slash
+
+# B 看结构（写解析器之前必做）
+node tools/inspect-html.mjs data/raw/Crescent_Slash.html
+
+# C 解析 + 索引
+node tools/parse-tlidb.mjs        # → data/parsed/*.json
+node tools/parse-skills.mjs       # → data/skills.js
+node tools/build-index.mjs        # → data/index.js
 ```
+
+当前产物：**18 页 / 12098 条词条 / 919 个技能**，索引扫描 12107 条、命中 834 条。
 
 环境要求：**Node 18+**（脚本用内置 `fetch`，无依赖）。当前机器已验证 `node v22.23.2` 可用。
 

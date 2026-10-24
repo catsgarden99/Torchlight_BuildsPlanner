@@ -52,7 +52,7 @@ function buildTermTable(buffs) {
 }
 
 async function main() {
-  const { TLI_BUFFS: buffs } = await loadGlobals(["buffs.js"]);
+  const { TLI_BUFFS: buffs, TLI_SKILLS: skillData } = await loadGlobals(["buffs.js", "skills.js"]);
   if (!buffs) throw new Error("data/buffs.js 没有导出 TLI_BUFFS");
 
   const files = (await readdir(PARSED_DIR)).filter((name) => name.endsWith(".json"));
@@ -63,39 +63,62 @@ async function main() {
   let scannedMods = 0;
   let matchedMods = 0;
 
+  /** 一条文本 → 命中哪些 buff（长词优先，避免「祝福」吃掉「聚能祝福」） */
+  function record(text, meta) {
+    if (!text || text.length === 0) return;
+    const hitBuffIds = new Set();
+    for (const { term, buffId } of terms) {
+      if (!hitBuffIds.has(buffId) && text.includes(term)) hitBuffIds.add(buffId);
+    }
+    if (hitBuffIds.size === 0) return;
+    matchedMods += 1;
+    for (const buffId of hitBuffIds) {
+      const bucket = byBuff.get(buffId);
+      if (!bucket) continue;
+      bucket.count += 1;
+      bucket.byPage[meta.page] = (bucket.byPage[meta.page] || 0) + 1;
+      const key = `${meta.item || ""}|${text}`;
+      if (bucket.seen.size < MAX_SAMPLES && !bucket.seen.has(key)) {
+        bucket.seen.add(key);
+        bucket.samples.push({ ...meta, text });
+      }
+    }
+  }
+
   for (const file of files.sort()) {
     const page = JSON.parse(await readFile(path.join(PARSED_DIR, file), "utf8"));
     for (const item of page.items) {
       for (const mod of item.mods) {
         scannedMods += 1;
-        const text = mod.text || "";
-        if (text.length === 0) continue;
-        const hitBuffIds = new Set();
-        for (const { term, buffId } of terms) {
-          if (!hitBuffIds.has(buffId) && text.includes(term)) hitBuffIds.add(buffId);
-        }
-        if (hitBuffIds.size === 0) continue;
-        matchedMods += 1;
-        for (const buffId of hitBuffIds) {
-          const bucket = byBuff.get(buffId);
-          if (!bucket) continue;
-          bucket.count += 1;
-          bucket.byPage[page.page] = (bucket.byPage[page.page] || 0) + 1;
-          const key = `${item.name || ""}|${text}`;
-          if (bucket.seen.size < MAX_SAMPLES && !bucket.seen.has(key)) {
-            bucket.seen.add(key);
-            bucket.samples.push({
-              page: page.page,
-              item: item.name,
-              slug: item.slug,
-              category: item.category,
-              corroded: item.corroded,
-              tier: mod.tier,
-              modId: mod.id,
-              text,
-            });
-          }
-        }
+        record(mod.text, {
+          page: page.page,
+          item: item.name,
+          slug: item.slug,
+          category: item.category,
+          corroded: item.corroded,
+          tier: mod.tier,
+          modId: mod.id,
+          kind: "mod",
+        });
+      }
+    }
+  }
+
+  // 技能文本也进索引：很多 buff 只写在技能描述里（例如「月晕」只出现在主技能上）
+  if (skillData && Array.isArray(skillData.skills)) {
+    for (const skill of skillData.skills) {
+      for (const line of skill.lines || []) {
+        scannedMods += 1;
+        record(line, {
+          page: "skills",
+          item: skill.name,
+          slug: skill.slug,
+          category: (skill.tags || []).map((tag) => tag.label).join("/"),
+          corroded: false,
+          tier: null,
+          modId: null,
+          kind: "skill",
+        });
       }
     }
   }

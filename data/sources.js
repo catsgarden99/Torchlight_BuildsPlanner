@@ -308,4 +308,40 @@ window.TLI_SOURCES = [
     verified: true,
     incomplete: true,
   },
+
+  // ───────────────────────────── 主技能（猫眼·寻仇之刺）─────────────────────────────
+  {
+    id: "src.skill.crescent_slash.moon_halo",
+    name: "碎月弧光斩（主技能）",
+    kind: "skill",
+    buffIds: ["moon_halo"],
+    role: "grant",
+    effect: { mode: "burst", stacks: 1 },
+    text:
+      "连携起手1：向前斩出一道剑气，造成 502% 武器攻击伤害\n" +
+      "连携起手2：向前连续斩出 6 道剑气，每次造成 83% 武器攻击伤害\n" +
+      "连携终结：向前斩出三道剑气波，对敌人造成 100% 武器攻击伤害。消耗所有连携点，每消耗 1 点就额外对敌人造成一次伤害。\n" +
+      "该技能的连携起手技击中时，获得 1 层月晕",
+    value: "只要起手技打中就给月晕——这是这条 BD 的层数来源，不需要额外装备",
+    cost: { load: "低" },
+    constraints: ["已在主技能位（无额外占用）", "需要起手技实际命中"],
+    ref: "https://tlidb.com/cn/Crescent_Slash",
+    verified: true,
+  },
+  {
+    id: "src.skill.crescent_slash.combo",
+    name: "碎月弧光斩·连携终结（主技能）",
+    kind: "skill",
+    buffIds: ["combo_point"],
+    role: "consume",
+    effect: { mode: "none" },
+    text:
+      "连携终结：向前斩出三道剑气波，对敌人造成 100% 武器攻击伤害。消耗所有连携点，每消耗 1 点就额外对敌人造成一次伤害。\n" +
+      "每 1 点连携点，该技能的连携起手技 +3% 技能范围",
+    value: "连携点决定终结技的额外伤害段数——连携点数本身就是收益",
+    cost: { load: "低" },
+    constraints: ["已在主技能位（无额外占用）"],
+    ref: "https://tlidb.com/cn/Crescent_Slash",
+    verified: true,
+  },
 ];

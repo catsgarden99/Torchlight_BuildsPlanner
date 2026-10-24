@@ -10,8 +10,14 @@ window.TLI_PROFILE = {
     traitSlug: "Vendettas_Sting",
     note: "猫3",
   },
-  // 主技能（slug 待抓取技能详情页后回填，届时可做「主技能能吃哪些加成」的反向索引）
-  mainSkill: { name: "碎月弧光斩", slug: null },
+  // 主技能：碎月弧光斩（标签：攻击/近战/范围/物理/连携/敏捷/持续）
+  mainSkill: {
+    name: "碎月弧光斩",
+    slug: "Crescent_Slash",
+    tags: ["攻击", "近战", "范围", "物理", "连携", "敏捷", "持续"],
+    grants: ["moon_halo"],
+    consumes: ["combo_point"],
+  },
   // 我关心的目标：默认只在这些 buff 上算缺口（空数组 = 全部）
   focusBuffIds: [],
 };

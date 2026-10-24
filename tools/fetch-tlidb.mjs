@@ -65,6 +65,7 @@ function parseArgs(argv) {
     else if (arg === "--dry-run") options.dryRun = true;
     else if (arg === "--list") options.list = true;
     else if (arg.startsWith("--only=")) options.only = arg.slice("--only=".length).split(",").map((s) => s.trim()).filter(Boolean);
+    else if (arg.startsWith("--slug=")) options.slugs = arg.slice("--slug=".length).split(",").map((s) => s.trim()).filter(Boolean);
     else if (arg.startsWith("--delay=")) options.delay = Number(arg.slice("--delay=".length)) || 450;
     else if (arg.startsWith("--retries=")) options.retries = Number(arg.slice("--retries=".length)) || 3;
     else if (arg === "--help" || arg === "-h") options.help = true;
@@ -172,7 +173,10 @@ async function main() {
   }
 
   let queue = pages.pages;
-  if (options.only.length > 0) {
+  if (options.slugs && options.slugs.length > 0) {
+    // 单页/指定 slug：用于按需抓某个技能或装备详情页
+    queue = options.slugs.map((slug) => ({ slug, group: "ad-hoc", note: "指定抓取" }));
+  } else if (options.only.length > 0) {
     const wanted = new Set(options.only);
     queue = pages.pages.filter((page) => wanted.has(page.group) || wanted.has(page.slug));
   } else if (!options.all) {

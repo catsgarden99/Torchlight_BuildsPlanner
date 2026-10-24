@@ -150,4 +150,32 @@ window.TLI_BUFFS = [
     refs: [{ label: "tlidb /cn/Aura", url: "https://tlidb.com/cn/Aura" }],
     incomplete: false,
   },
+  {
+    id: "moon_halo",
+    name: "月晕",
+    family: "resource",
+    aliases: ["月晕", "Moon Halo"],
+    unit: "层",
+    baseCap: null,
+    targetDefault: 1,
+    summary: "猫眼·寻仇之刺这条线的层数资源：碎月弧光斩的连携起手技击中时获得 1 层。",
+    mechanics:
+      "来源（已核实）：主技能「碎月弧光斩」——该技能的连携起手技击中时，获得 1 层月晕。\n上限 / 消耗 / 具体增益文本在技能详情页的后续行里，待补。",
+    refs: [{ label: "tlidb /cn/Crescent_Slash", url: "https://tlidb.com/cn/Crescent_Slash" }],
+    incomplete: true,
+  },
+  {
+    id: "combo_point",
+    name: "连携点",
+    family: "resource",
+    aliases: ["连携点", "连携", "Combo Point"],
+    unit: "点",
+    baseCap: null,
+    targetDefault: 1,
+    summary: "猫眼·寻仇之刺的核心资源：连携终结会消耗所有连携点，每消耗 1 点额外造成一次伤害。",
+    mechanics:
+      "来源（已核实）：主技能「碎月弧光斩」的连携终结——对敌人造成 100% 武器攻击伤害，消耗所有连携点，每消耗 1 点就额外对敌人造成一次伤害。\n生成方式（每 1 点连携点 +3% 技能范围等细节）见技能详情页。",
+    refs: [{ label: "tlidb /cn/Crescent_Slash", url: "https://tlidb.com/cn/Crescent_Slash" }],
+    incomplete: true,
+  },
 ];
